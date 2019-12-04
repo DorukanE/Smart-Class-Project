@@ -1,0 +1,14 @@
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\bin\Debug\Yazılım-Test-Ve-Sınama.exe.config
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\bin\Debug\Yazılım-Test-Ve-Sınama.exe
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\bin\Debug\Yazılım-Test-Ve-Sınama.pdb
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\bin\Debug\MetroFramework.dll
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım-Test-Ve-Sınama.csprojAssemblyReference.cache
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım_Test_Ve_Sınama.Properties.Resources.resources
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım-Test-Ve-Sınama.csproj.GenerateResource.cache
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım-Test-Ve-Sınama.csproj.CopyComplete
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım-Test-Ve-Sınama.exe
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım-Test-Ve-Sınama.pdb
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım_Test_Ve_Sınama.frmGiris.resources
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım_Test_Ve_Sınama.FrmOgretmen.resources
+C:\Users\doruk\Desktop\Yazılım-Test-Ve-Sınama\Yazılım-Test-Ve-Sınama\obj\Debug\Yazılım_Test_Ve_Sınama.FrmOgrenci.resources
