@@ -35,9 +35,9 @@
             this.txtSoru = new MetroFramework.Controls.MetroTextBox();
             this.txtDogruCevap = new MetroFramework.Controls.MetroTextBox();
             this.btnSoruEkle = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             this.pictureBoxOgretmen = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,16 +101,16 @@
             this.btnSoruEkle.TabIndex = 6;
             this.btnSoruEkle.Text = "Soru Ekle";
             // 
-            // pictureBox1
+            // pictureBoxExit
             // 
-            this.pictureBox1.Image = global::YazilimSinama.Properties.Resources._32210569_exit_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(712, 377);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBoxExit.Image = global::YazilimSinama.Properties.Resources._32210569_exit_icon;
+            this.pictureBoxExit.Location = new System.Drawing.Point(712, 377);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(65, 50);
+            this.pictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxExit.TabIndex = 8;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBoxOgretmen
             // 
@@ -127,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxExit);
             this.Controls.Add(this.pictureBoxOgretmen);
             this.Controls.Add(this.btnSoruEkle);
             this.Controls.Add(this.txtDogruCevap);
@@ -139,7 +139,7 @@
             this.Name = "FrmOgretmen";
             this.Text = "Öğretmen Girişi";
             this.Load += new System.EventHandler(this.FrmOgretmen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,6 +156,6 @@
         private MetroFramework.Controls.MetroTextBox txtDogruCevap;
         private MetroFramework.Controls.MetroButton btnSoruEkle;
         private System.Windows.Forms.PictureBox pictureBoxOgretmen;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxExit;
     }
 }

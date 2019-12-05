@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmCubukGrafigi";
-            this.Text = "FrmCubukGrafigi";
+            this.Text = "Öğrenci Çubuk Grafiği";
             this.Load += new System.EventHandler(this.FrmCubukGrafigi_Load);
             this.ResumeLayout(false);
 

@@ -34,13 +34,13 @@ namespace YazilimSinama
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (rdnbtnogrenci.Checked == true)
+            if (rdnBtnOgrenci.Checked == true)
             {
                 FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
                 ogrenciyeGecis.Show();
                 this.Hide();
             }
-           else if(rdnbtnogretmen.Checked == true)
+           else if(rdnBtnOgretmen.Checked == true)
             {
                 FrmOgretmen ogretmeneGecis = new FrmOgretmen();
                 ogretmeneGecis.Show();

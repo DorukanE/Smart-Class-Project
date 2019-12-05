@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.lblSayac = new MetroFramework.Controls.MetroLabel();
             this.timersure = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.pictureBoxClock = new System.Windows.Forms.PictureBox();
+            this.progressBarSure = new MetroFramework.Controls.MetroProgressBar();
             this.btnASecenegi = new MetroFramework.Controls.MetroButton();
             this.btnBSecenegi = new MetroFramework.Controls.MetroButton();
             this.btnCSecenegi = new MetroFramework.Controls.MetroButton();
@@ -44,7 +44,7 @@
             this.txtDSecenegi = new MetroFramework.Controls.MetroTextBox();
             this.txtESecenegi = new MetroFramework.Controls.MetroTextBox();
             this.txtSoruMetni = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSayac
@@ -65,23 +65,23 @@
             this.timersure.Interval = 1000;
             this.timersure.Tick += new System.EventHandler(this.timersure_Tick);
             // 
-            // pictureBox1
+            // pictureBoxClock
             // 
-            this.pictureBox1.Image = global::YazilimSinama.Properties.Resources.alarm__clock__time__alert__bell__alarmicon__firealarm__siren_512;
-            this.pictureBox1.Location = new System.Drawing.Point(703, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxClock.Image = global::YazilimSinama.Properties.Resources.alarm__clock__time__alert__bell__alarmicon__firealarm__siren_512;
+            this.pictureBoxClock.Location = new System.Drawing.Point(703, 72);
+            this.pictureBoxClock.Name = "pictureBoxClock";
+            this.pictureBoxClock.Size = new System.Drawing.Size(33, 25);
+            this.pictureBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxClock.TabIndex = 12;
+            this.pictureBoxClock.TabStop = false;
             // 
-            // metroProgressBar1
+            // progressBarSure
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(18, 78);
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(659, 19);
-            this.metroProgressBar1.TabIndex = 13;
-            this.metroProgressBar1.Value = 50;
+            this.progressBarSure.Location = new System.Drawing.Point(18, 78);
+            this.progressBarSure.Name = "progressBarSure";
+            this.progressBarSure.Size = new System.Drawing.Size(659, 19);
+            this.progressBarSure.TabIndex = 13;
+            this.progressBarSure.Value = 50;
             // 
             // btnASecenegi
             // 
@@ -161,6 +161,7 @@
             // txtSoruMetni
             // 
             this.txtSoruMetni.Location = new System.Drawing.Point(141, 152);
+            this.txtSoruMetni.Multiline = true;
             this.txtSoruMetni.Name = "txtSoruMetni";
             this.txtSoruMetni.Size = new System.Drawing.Size(450, 20);
             this.txtSoruMetni.TabIndex = 24;
@@ -181,13 +182,13 @@
             this.Controls.Add(this.btnCSecenegi);
             this.Controls.Add(this.btnBSecenegi);
             this.Controls.Add(this.btnASecenegi);
-            this.Controls.Add(this.metroProgressBar1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.progressBarSure);
+            this.Controls.Add(this.pictureBoxClock);
             this.Controls.Add(this.lblSayac);
             this.Name = "FrmSinav";
-            this.Text = "Sınav";
+            this.Text = "Sınav Olma Ekranı";
             this.Load += new System.EventHandler(this.FrmSinav_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,8 +197,8 @@
         #endregion
         private MetroFramework.Controls.MetroLabel lblSayac;
         private System.Windows.Forms.Timer timersure;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private System.Windows.Forms.PictureBox pictureBoxClock;
+        private MetroFramework.Controls.MetroProgressBar progressBarSure;
         private MetroFramework.Controls.MetroButton btnASecenegi;
         private MetroFramework.Controls.MetroButton btnBSecenegi;
         private MetroFramework.Controls.MetroButton btnCSecenegi;
