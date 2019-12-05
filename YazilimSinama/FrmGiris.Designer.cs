@@ -110,7 +110,7 @@
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(84, 28);
             this.btnGiris.TabIndex = 10;
-            this.btnGiris.Text = "GİRİS";
+            this.btnGiris.Text = "GİRİs";
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // pictureBox2
