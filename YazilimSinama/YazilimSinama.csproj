@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="FrmBarGrafigi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,8 @@
     <Compile Include="FrmSinav.Designer.cs">
       <DependentUpon>FrmSinav.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciGiris.cs" />
+    <Compile Include="OgretmenGiris.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBarGrafigi.resx">

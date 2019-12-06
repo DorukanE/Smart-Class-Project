@@ -16,6 +16,8 @@ namespace YazilimSinama
         {
             InitializeComponent();
         }
+        OgrenciGiris ogrencigirisyapalim = new OgrenciGiris();
+        OgretmenGiris ogretmengirisyapalim = new OgretmenGiris();
 
         private void FrmGiris_Load(object sender, EventArgs e)
         {
@@ -31,22 +33,29 @@ namespace YazilimSinama
         {
 
         }
-
-        private void btnGiris_Click(object sender, EventArgs e)
-        {
-            if (rdnBtnOgrenci.Checked == true)
+    
+            private void btnGiris_Click(object sender, EventArgs e)
             {
-                FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
-                ogrenciyeGecis.Show();
-                this.Hide();
-            }
-           else if(rdnBtnOgretmen.Checked == true)
-            {
-                FrmOgretmen ogretmeneGecis = new FrmOgretmen();
-                ogretmeneGecis.Show();
-                this.Hide();
-            }
+                if (txtKullanici.Text == string.Empty || txtSifre.Text == string.Empty)
+                {
+                    MessageBox.Show("Lütfen Kullanici Adi Ve Sifreni Gir..");
 
-        }
+                }
+                if (rdnBtnOgrenci.Checked == true)
+                {
+                    ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text);
+                    FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
+                    ogrenciyeGecis.Show();
+                    this.Hide();
+                }
+                if (rdnBtnOgretmen.Checked == true)
+                {
+                    ogretmengirisyapalim.OgretmengirisYap(txtKullanici.Text, txtSifre.Text);
+                    FrmOgretmen ogretmenegecis = new FrmOgretmen();
+                    ogretmenegecis.Show();
+                    this.Hide();
+                }
+
+            }
     }
 }
