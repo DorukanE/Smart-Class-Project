@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kullanıcıBilgileriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cubukGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,21 +65,11 @@
             // 
             // profilimToolStripMenuItem
             // 
-            this.profilimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kullanıcıBilgileriToolStripMenuItem});
             this.profilimToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profilimToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("profilimToolStripMenuItem.Image")));
             this.profilimToolStripMenuItem.Name = "profilimToolStripMenuItem";
             this.profilimToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
             this.profilimToolStripMenuItem.Text = "PROFİLİM";
-            // 
-            // kullanıcıBilgileriToolStripMenuItem
-            // 
-            this.kullanıcıBilgileriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kullanıcıBilgileriToolStripMenuItem.Image")));
-            this.kullanıcıBilgileriToolStripMenuItem.Name = "kullanıcıBilgileriToolStripMenuItem";
-            this.kullanıcıBilgileriToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
-            this.kullanıcıBilgileriToolStripMenuItem.Text = "KULLANICI BİLGİLERİM";
-            this.kullanıcıBilgileriToolStripMenuItem.Click += new System.EventHandler(this.kULLANICIBİLGİLERİMToolStripMenuItem_Click);
             // 
             // istatiklerToolStripMenuItem
             // 
@@ -258,7 +247,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem profilimToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kullanıcıBilgileriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem istatiklerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barGrafikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cubukGrafikToolStripMenuItem;
