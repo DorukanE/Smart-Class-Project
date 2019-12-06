@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmBarGrafigi";
-            this.Text = "FrmBarGrafigi";
+            this.Text = "Öğrenci Bar Grafiği";
             this.Load += new System.EventHandler(this.FrmBarGrafigi_Load);
             this.ResumeLayout(false);
 

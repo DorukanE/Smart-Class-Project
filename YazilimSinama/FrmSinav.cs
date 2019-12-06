@@ -35,7 +35,7 @@ namespace YazilimSinama
         private void timersure_Tick(object sender, EventArgs e)
         {
             int sure = int.Parse(lblSayac.Text);
-            sure--;
+            sure --;
             lblSayac.Text = sure.ToString();
             if (sure <= 0)
             {
