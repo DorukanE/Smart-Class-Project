@@ -77,6 +77,7 @@
             this.txtKonu.Name = "txtKonu";
             this.txtKonu.Size = new System.Drawing.Size(75, 23);
             this.txtKonu.TabIndex = 3;
+            this.txtKonu.Click += new System.EventHandler(this.txtKonu_Click);
             // 
             // txtSoru
             // 
@@ -100,6 +101,7 @@
             this.btnSoruEkle.Size = new System.Drawing.Size(91, 45);
             this.btnSoruEkle.TabIndex = 6;
             this.btnSoruEkle.Text = "Soru Ekle";
+            this.btnSoruEkle.Click += new System.EventHandler(this.btnSoruEkle_Click);
             // 
             // pictureBoxExit
             // 
