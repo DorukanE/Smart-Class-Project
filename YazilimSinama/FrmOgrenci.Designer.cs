@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,39 +39,54 @@
             this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çIKIŞYAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblIsim = new MetroFramework.Controls.MetroLabel();
-            this.lblSoyisim = new MetroFramework.Controls.MetroLabel();
-            this.lblYas = new MetroFramework.Controls.MetroLabel();
-            this.lblOkul = new MetroFramework.Controls.MetroLabel();
-            this.lblCinsiyet = new MetroFramework.Controls.MetroLabel();
-            this.lblIsimVeritabani = new MetroFramework.Controls.MetroLabel();
-            this.lblSoyisimVeritabani = new MetroFramework.Controls.MetroLabel();
-            this.lblOkulVeritabani = new MetroFramework.Controls.MetroLabel();
-            this.lblYasVeritabani = new MetroFramework.Controls.MetroLabel();
-            this.lblCinsiyetVeritabani = new MetroFramework.Controls.MetroLabel();
-            this.menuStrip1.SuspendLayout();
+            this.akilliSinifDataSet = new YazilimSinama.AkilliSinifDataSet();
+            this.tblOgrenciBilgiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_OgrenciBilgiTableAdapter = new YazilimSinama.AkilliSinifDataSetTableAdapters.tbl_OgrenciBilgiTableAdapter();
+            this.ogrenciIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciOkulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciCinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinavTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciDTarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listViewProfilim = new System.Windows.Forms.ListView();
+            this.columnHeaderAd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderOkul = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCinsiyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSinavTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStripOgrenci.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.akilliSinifDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripOgrenci
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripOgrenci.BackColor = System.Drawing.Color.LightGreen;
+            this.menuStripOgrenci.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menuStripOgrenci.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profilimToolStripMenuItem,
             this.istatiklerToolStripMenuItem,
             this.sinavaBaslaToolStripMenuItem,
             this.cikisToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(728, 33);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripOgrenci.Location = new System.Drawing.Point(20, 60);
+            this.menuStripOgrenci.Name = "menuStripOgrenci";
+            this.menuStripOgrenci.Size = new System.Drawing.Size(890, 29);
+            this.menuStripOgrenci.TabIndex = 0;
+            this.menuStripOgrenci.Text = "menuStrip1";
+            this.menuStripOgrenci.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStripOgrenci_ItemClicked);
             // 
             // profilimToolStripMenuItem
             // 
             this.profilimToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.profilimToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("profilimToolStripMenuItem.Image")));
             this.profilimToolStripMenuItem.Name = "profilimToolStripMenuItem";
-            this.profilimToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
+            this.profilimToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
             this.profilimToolStripMenuItem.Text = "PROFİLİM";
+            this.profilimToolStripMenuItem.Click += new System.EventHandler(this.profilimToolStripMenuItem_Click);
             // 
             // istatiklerToolStripMenuItem
             // 
@@ -98,10 +115,10 @@
             // 
             // sinavaBaslaToolStripMenuItem
             // 
-            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sinavaBaslaToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exam;
             this.sinavaBaslaToolStripMenuItem.Name = "sinavaBaslaToolStripMenuItem";
-            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(173, 29);
+            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
             this.sinavaBaslaToolStripMenuItem.Text = "SINAVA BAŞLA";
             this.sinavaBaslaToolStripMenuItem.Click += new System.EventHandler(this.sINAVABAŞLAToolStripMenuItem_Click);
             // 
@@ -125,119 +142,143 @@
             this.çIKIŞYAPToolStripMenuItem.Text = "ÇIKIŞ YAP";
             this.çIKIŞYAPToolStripMenuItem.Click += new System.EventHandler(this.çIKIŞYAPToolStripMenuItem_Click);
             // 
-            // lblIsim
+            // akilliSinifDataSet
             // 
-            this.lblIsim.AutoSize = true;
-            this.lblIsim.Location = new System.Drawing.Point(25, 154);
-            this.lblIsim.Name = "lblIsim";
-            this.lblIsim.Size = new System.Drawing.Size(35, 19);
-            this.lblIsim.TabIndex = 1;
-            this.lblIsim.Text = "İsim:";
+            this.akilliSinifDataSet.DataSetName = "AkilliSinifDataSet";
+            this.akilliSinifDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lblSoyisim
+            // tblOgrenciBilgiBindingSource
             // 
-            this.lblSoyisim.AutoSize = true;
-            this.lblSoyisim.Location = new System.Drawing.Point(23, 186);
-            this.lblSoyisim.Name = "lblSoyisim";
-            this.lblSoyisim.Size = new System.Drawing.Size(56, 19);
-            this.lblSoyisim.TabIndex = 2;
-            this.lblSoyisim.Text = "Soyisim:";
+            this.tblOgrenciBilgiBindingSource.DataMember = "tbl_OgrenciBilgi";
+            this.tblOgrenciBilgiBindingSource.DataSource = this.akilliSinifDataSet;
             // 
-            // lblYas
+            // tbl_OgrenciBilgiTableAdapter
             // 
-            this.lblYas.AutoSize = true;
-            this.lblYas.Location = new System.Drawing.Point(25, 251);
-            this.lblYas.Name = "lblYas";
-            this.lblYas.Size = new System.Drawing.Size(30, 19);
-            this.lblYas.TabIndex = 3;
-            this.lblYas.Text = "Yas:";
+            this.tbl_OgrenciBilgiTableAdapter.ClearBeforeFill = true;
             // 
-            // lblOkul
+            // ogrenciIDDataGridViewTextBoxColumn
             // 
-            this.lblOkul.AutoSize = true;
-            this.lblOkul.Location = new System.Drawing.Point(25, 220);
-            this.lblOkul.Name = "lblOkul";
-            this.lblOkul.Size = new System.Drawing.Size(39, 19);
-            this.lblOkul.TabIndex = 4;
-            this.lblOkul.Text = "Okul:";
+            this.ogrenciIDDataGridViewTextBoxColumn.DataPropertyName = "ogrenciID";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ogrenciIDDataGridViewTextBoxColumn.HeaderText = "ogrenciID";
+            this.ogrenciIDDataGridViewTextBoxColumn.Name = "ogrenciIDDataGridViewTextBoxColumn";
+            this.ogrenciIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // lblCinsiyet
+            // ogrenciAdDataGridViewTextBoxColumn
             // 
-            this.lblCinsiyet.AutoSize = true;
-            this.lblCinsiyet.Location = new System.Drawing.Point(23, 283);
-            this.lblCinsiyet.Name = "lblCinsiyet";
-            this.lblCinsiyet.Size = new System.Drawing.Size(56, 19);
-            this.lblCinsiyet.TabIndex = 5;
-            this.lblCinsiyet.Text = "Cinsiyet:";
+            this.ogrenciAdDataGridViewTextBoxColumn.DataPropertyName = "ogrenciAd";
+            this.ogrenciAdDataGridViewTextBoxColumn.HeaderText = "ogrenciAd";
+            this.ogrenciAdDataGridViewTextBoxColumn.Name = "ogrenciAdDataGridViewTextBoxColumn";
             // 
-            // lblIsimVeritabani
+            // ogrenciSoyadDataGridViewTextBoxColumn
             // 
-            this.lblIsimVeritabani.AutoSize = true;
-            this.lblIsimVeritabani.Location = new System.Drawing.Point(109, 154);
-            this.lblIsimVeritabani.Name = "lblIsimVeritabani";
-            this.lblIsimVeritabani.Size = new System.Drawing.Size(81, 19);
-            this.lblIsimVeritabani.TabIndex = 6;
-            this.lblIsimVeritabani.Text = "metroLabel1";
+            this.ogrenciSoyadDataGridViewTextBoxColumn.DataPropertyName = "ogrenciSoyad";
+            this.ogrenciSoyadDataGridViewTextBoxColumn.HeaderText = "ogrenciSoyad";
+            this.ogrenciSoyadDataGridViewTextBoxColumn.Name = "ogrenciSoyadDataGridViewTextBoxColumn";
             // 
-            // lblSoyisimVeritabani
+            // ogrenciOkulDataGridViewTextBoxColumn
             // 
-            this.lblSoyisimVeritabani.AutoSize = true;
-            this.lblSoyisimVeritabani.Location = new System.Drawing.Point(107, 186);
-            this.lblSoyisimVeritabani.Name = "lblSoyisimVeritabani";
-            this.lblSoyisimVeritabani.Size = new System.Drawing.Size(83, 19);
-            this.lblSoyisimVeritabani.TabIndex = 7;
-            this.lblSoyisimVeritabani.Text = "metroLabel2";
+            this.ogrenciOkulDataGridViewTextBoxColumn.DataPropertyName = "ogrenciOkul";
+            this.ogrenciOkulDataGridViewTextBoxColumn.HeaderText = "ogrenciOkul";
+            this.ogrenciOkulDataGridViewTextBoxColumn.Name = "ogrenciOkulDataGridViewTextBoxColumn";
             // 
-            // lblOkulVeritabani
+            // ogrenciCinsiyetDataGridViewTextBoxColumn
             // 
-            this.lblOkulVeritabani.AutoSize = true;
-            this.lblOkulVeritabani.Location = new System.Drawing.Point(109, 220);
-            this.lblOkulVeritabani.Name = "lblOkulVeritabani";
-            this.lblOkulVeritabani.Size = new System.Drawing.Size(83, 19);
-            this.lblOkulVeritabani.TabIndex = 8;
-            this.lblOkulVeritabani.Text = "metroLabel3";
+            this.ogrenciCinsiyetDataGridViewTextBoxColumn.DataPropertyName = "ogrenciCinsiyet";
+            this.ogrenciCinsiyetDataGridViewTextBoxColumn.HeaderText = "ogrenciCinsiyet";
+            this.ogrenciCinsiyetDataGridViewTextBoxColumn.Name = "ogrenciCinsiyetDataGridViewTextBoxColumn";
             // 
-            // lblYasVeritabani
+            // sinavTarihiDataGridViewTextBoxColumn
             // 
-            this.lblYasVeritabani.AutoSize = true;
-            this.lblYasVeritabani.Location = new System.Drawing.Point(109, 251);
-            this.lblYasVeritabani.Name = "lblYasVeritabani";
-            this.lblYasVeritabani.Size = new System.Drawing.Size(83, 19);
-            this.lblYasVeritabani.TabIndex = 9;
-            this.lblYasVeritabani.Text = "metroLabel4";
+            this.sinavTarihiDataGridViewTextBoxColumn.DataPropertyName = "sinavTarihi";
+            this.sinavTarihiDataGridViewTextBoxColumn.HeaderText = "sinavTarihi";
+            this.sinavTarihiDataGridViewTextBoxColumn.Name = "sinavTarihiDataGridViewTextBoxColumn";
             // 
-            // lblCinsiyetVeritabani
+            // ogrenciDTarihDataGridViewTextBoxColumn
             // 
-            this.lblCinsiyetVeritabani.AutoSize = true;
-            this.lblCinsiyetVeritabani.Location = new System.Drawing.Point(109, 283);
-            this.lblCinsiyetVeritabani.Name = "lblCinsiyetVeritabani";
-            this.lblCinsiyetVeritabani.Size = new System.Drawing.Size(83, 19);
-            this.lblCinsiyetVeritabani.TabIndex = 10;
-            this.lblCinsiyetVeritabani.Text = "metroLabel5";
+            this.ogrenciDTarihDataGridViewTextBoxColumn.DataPropertyName = "ogrenciDTarih";
+            this.ogrenciDTarihDataGridViewTextBoxColumn.HeaderText = "ogrenciDTarih";
+            this.ogrenciDTarihDataGridViewTextBoxColumn.Name = "ogrenciDTarihDataGridViewTextBoxColumn";
+            // 
+            // listViewProfilim
+            // 
+            this.listViewProfilim.BackColor = System.Drawing.Color.LightGreen;
+            this.listViewProfilim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderAd,
+            this.columnHeaderSoyad,
+            this.columnHeaderOkul,
+            this.columnHeaderCinsiyet,
+            this.columnHeaderSinavTarihi,
+            this.columnHeaderDogumTarihi});
+            this.listViewProfilim.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listViewProfilim.HideSelection = false;
+            this.listViewProfilim.Location = new System.Drawing.Point(186, 193);
+            this.listViewProfilim.Name = "listViewProfilim";
+            this.listViewProfilim.Size = new System.Drawing.Size(724, 204);
+            this.listViewProfilim.TabIndex = 1;
+            this.listViewProfilim.UseCompatibleStateImageBehavior = false;
+            this.listViewProfilim.View = System.Windows.Forms.View.Details;
+            this.listViewProfilim.SelectedIndexChanged += new System.EventHandler(this.listViewProfilim_SelectedIndexChanged);
+            // 
+            // columnHeaderAd
+            // 
+            this.columnHeaderAd.Text = "Öğrenci Ad";
+            this.columnHeaderAd.Width = 115;
+            // 
+            // columnHeaderSoyad
+            // 
+            this.columnHeaderSoyad.Text = "Öğrenci Soyad";
+            this.columnHeaderSoyad.Width = 139;
+            // 
+            // columnHeaderOkul
+            // 
+            this.columnHeaderOkul.Text = "Okul";
+            this.columnHeaderOkul.Width = 73;
+            // 
+            // columnHeaderCinsiyet
+            // 
+            this.columnHeaderCinsiyet.Text = "Cinsiyet";
+            this.columnHeaderCinsiyet.Width = 109;
+            // 
+            // columnHeaderSinavTarihi
+            // 
+            this.columnHeaderSinavTarihi.Text = "Sınav Tarihi";
+            this.columnHeaderSinavTarihi.Width = 122;
+            // 
+            // columnHeaderDogumTarihi
+            // 
+            this.columnHeaderDogumTarihi.Text = "Doğum Tarihi";
+            this.columnHeaderDogumTarihi.Width = 138;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 193);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 443);
-            this.Controls.Add(this.lblCinsiyetVeritabani);
-            this.Controls.Add(this.lblYasVeritabani);
-            this.Controls.Add(this.lblOkulVeritabani);
-            this.Controls.Add(this.lblSoyisimVeritabani);
-            this.Controls.Add(this.lblIsimVeritabani);
-            this.Controls.Add(this.lblCinsiyet);
-            this.Controls.Add(this.lblOkul);
-            this.Controls.Add(this.lblYas);
-            this.Controls.Add(this.lblSoyisim);
-            this.Controls.Add(this.lblIsim);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(930, 516);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.listViewProfilim);
+            this.Controls.Add(this.menuStripOgrenci);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStripOgrenci;
             this.Name = "FrmOgrenci";
             this.Text = "Öğrenci Girişi";
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripOgrenci.ResumeLayout(false);
+            this.menuStripOgrenci.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.akilliSinifDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +286,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripOgrenci;
         private System.Windows.Forms.ToolStripMenuItem profilimToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem istatiklerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barGrafikToolStripMenuItem;
@@ -253,15 +294,23 @@
         private System.Windows.Forms.ToolStripMenuItem cikisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çIKIŞYAPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sinavaBaslaToolStripMenuItem;
-        private MetroFramework.Controls.MetroLabel lblIsim;
-        private MetroFramework.Controls.MetroLabel lblSoyisim;
-        private MetroFramework.Controls.MetroLabel lblYas;
-        private MetroFramework.Controls.MetroLabel lblOkul;
-        private MetroFramework.Controls.MetroLabel lblCinsiyet;
-        private MetroFramework.Controls.MetroLabel lblIsimVeritabani;
-        private MetroFramework.Controls.MetroLabel lblSoyisimVeritabani;
-        private MetroFramework.Controls.MetroLabel lblOkulVeritabani;
-        private MetroFramework.Controls.MetroLabel lblYasVeritabani;
-        private MetroFramework.Controls.MetroLabel lblCinsiyetVeritabani;
+        private AkilliSinifDataSet akilliSinifDataSet;
+        private System.Windows.Forms.BindingSource tblOgrenciBilgiBindingSource;
+        private AkilliSinifDataSetTableAdapters.tbl_OgrenciBilgiTableAdapter tbl_OgrenciBilgiTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciSoyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciOkulDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciCinsiyetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sinavTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciDTarihDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListView listViewProfilim;
+        private System.Windows.Forms.ColumnHeader columnHeaderAd;
+        private System.Windows.Forms.ColumnHeader columnHeaderSoyad;
+        private System.Windows.Forms.ColumnHeader columnHeaderOkul;
+        private System.Windows.Forms.ColumnHeader columnHeaderCinsiyet;
+        private System.Windows.Forms.ColumnHeader columnHeaderSinavTarihi;
+        private System.Windows.Forms.ColumnHeader columnHeaderDogumTarihi;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

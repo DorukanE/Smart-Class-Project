@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace YazilimSinama
 {
@@ -16,9 +17,30 @@ namespace YazilimSinama
         {
             InitializeComponent();
         }
+        Database dbislemleri = new Database();
+        private void profiligoster()
+        {
+            dbislemleri.baglanti.Open();
+            SqlCommand komut = new SqlCommand("SELECT * FROM tbl_OgrenciBilgi", dbislemleri.baglanti);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                ListViewItem ekle = new ListViewItem();
+                ekle.Text = oku["ogrenciAd"].ToString();
+                ekle.SubItems.Add(oku["ogrenciSoyad"].ToString());
+                ekle.SubItems.Add(oku["ogrenciOkul"].ToString());
+                ekle.SubItems.Add(oku["ogrenciCinsiyet"].ToString());
+                ekle.SubItems.Add(oku["sinavTarihi"].ToString());
+                ekle.SubItems.Add(oku["ogrenciDTarih"].ToString());
+                listViewProfilim.Items.Add(ekle);
+            }
+            dbislemleri.baglanti.Close();
+        }
+        
 
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -52,6 +74,32 @@ namespace YazilimSinama
             sinavol.Show();
             this.Hide();
             
+
+        }
+
+        private void lblCinsiyet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profilimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            profiligoster();
+            
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listViewProfilim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStripOgrenci_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }
