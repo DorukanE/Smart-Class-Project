@@ -51,5 +51,10 @@ namespace YazilimSinama
             txtKullanici.Text = txtKullanici.Text.ToLower();
             txtKullanici.SelectionStart = txtKullanici.Text.Length;
         }
+
+        private void FrmGiris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

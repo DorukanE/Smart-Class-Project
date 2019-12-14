@@ -150,6 +150,7 @@
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Giriş Ekranı";
+            this.Load += new System.EventHandler(this.FrmGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).EndInit();
             this.ResumeLayout(false);
