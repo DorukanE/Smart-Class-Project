@@ -17,7 +17,7 @@ namespace YazilimSinama
             public string girisDurumu { get; set; }
 
 
-            public void girisYap(string kullaniciAdi, string sifre)
+            public void girisYap(string kullaniciAdi, string sifre, Form frm1)
             {
                 if (db.baglanti.State == System.Data.ConnectionState.Open)
                 {
@@ -26,35 +26,42 @@ namespace YazilimSinama
                 try
                 {
                     db.baglanti.Open();
-                    SqlCommand giriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgrenciGiris WHERE kullaniciAdi=@kulAdi", db.baglanti);
+                    SqlCommand giriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgrenciGiris WHERE kullaniciAdi=@kulAdi AND sifre=@sifre", db.baglanti);
                     giriskomutu.Parameters.AddWithValue("@kulAdi", kullaniciAdi);
+                    giriskomutu.Parameters.AddWithValue("@sifre", sifre);
                     SqlDataReader kulAdi_Oku = giriskomutu.ExecuteReader();
                     if (kulAdi_Oku.Read())
                     {
-                        kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
-                        SqlCommand giriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgrenciGiris WHERE sifre=@sifre ", db.baglanti);
-                        giriskomutupw.Parameters.AddWithValue("@sifre", sifre);
-                        SqlDataReader giriskomutupw_oku = giriskomutupw.ExecuteReader();
+                    MessageBox.Show("Giriş başarılı");
+                    FrmOgrenci frmOgrenci = new FrmOgrenci();
+                    frm1.Hide();
+                    frmOgrenci.Show();
+                    //kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
+                    /*SqlCommand giriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgrenciGiris WHERE sifre=@sifre ", db.baglanti);
+                    giriskomutupw.Parameters.AddWithValue("@sifre", sifre);
+                    SqlDataReader giriskomutupw_oku = giriskomutupw.ExecuteReader();
 
-                        if (giriskomutupw_oku.Read())
-                        {
-                            sifre_tut = giriskomutupw_oku["sifre"].ToString();
-                            girisDurumu = kullaniciAdi_tut + " " + sifre_tut;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Kullanici Adini Yanlis Girdiniz!");
-                            Application.Exit();
+                    if (giriskomutupw_oku.Read())
+                    {
 
-                        }
+                        sifre_tut = giriskomutupw_oku["sifre"].ToString();
+                        girisDurumu = kullaniciAdi_tut + " " + sifre_tut;
                     }
                     else
                     {
-                        MessageBox.Show("Kullanici Adini Yanlis Girdiniz!!");
+                        MessageBox.Show("Kullanici Adini Yanlis Girdiniz!");
                         Application.Exit();
+
+                    }*/
+                }
+                    else
+                    {
+                        MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz.");
+                        //Application.Exit();
                     }
                 }
-                catch { }
+                catch{ }
+
                 finally
                 {
                     db.baglanti.Close();

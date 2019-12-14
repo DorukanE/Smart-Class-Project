@@ -32,12 +32,12 @@
             this.rdnBtnOgrenci = new MetroFramework.Controls.MetroRadioButton();
             this.rdnBtnOgretmen = new MetroFramework.Controls.MetroRadioButton();
             this.lblKullaniciAdi = new MetroFramework.Controls.MetroLabel();
-            this.txtKullanici = new MetroFramework.Controls.MetroTextBox();
             this.lblSifre = new MetroFramework.Controls.MetroLabel();
-            this.txtSifre = new MetroFramework.Controls.MetroTextBox();
             this.btnGiris = new MetroFramework.Controls.MetroButton();
             this.pictureBoxOgretmen = new System.Windows.Forms.PictureBox();
             this.pictureBoxOgrenci = new System.Windows.Forms.PictureBox();
+            this.txtKullanici = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,6 @@
             this.rdnBtnOgrenci.TabStop = true;
             this.rdnBtnOgrenci.Text = "Öğrenci Girişi";
             this.rdnBtnOgrenci.UseVisualStyleBackColor = true;
-            this.rdnBtnOgrenci.CheckedChanged += new System.EventHandler(this.metroRadioButton1_CheckedChanged);
             // 
             // rdnBtnOgretmen
             // 
@@ -78,14 +77,6 @@
             this.lblKullaniciAdi.TabIndex = 4;
             this.lblKullaniciAdi.Text = "Kullanıcı Adını Giriniz:";
             // 
-            // txtKullanici
-            // 
-            this.txtKullanici.Location = new System.Drawing.Point(394, 231);
-            this.txtKullanici.Name = "txtKullanici";
-            this.txtKullanici.Size = new System.Drawing.Size(150, 23);
-            this.txtKullanici.TabIndex = 6;
-            this.txtKullanici.Click += new System.EventHandler(this.txtKullanici_Click);
-            // 
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
@@ -95,13 +86,6 @@
             this.lblSifre.Size = new System.Drawing.Size(91, 19);
             this.lblSifre.TabIndex = 8;
             this.lblSifre.Text = "Şifre Giriniz:";
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(394, 288);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(150, 23);
-            this.txtSifre.TabIndex = 9;
             // 
             // btnGiris
             // 
@@ -133,15 +117,31 @@
             this.pictureBoxOgrenci.TabIndex = 0;
             this.pictureBoxOgrenci.TabStop = false;
             // 
+            // txtKullanici
+            // 
+            this.txtKullanici.Location = new System.Drawing.Point(488, 229);
+            this.txtKullanici.Name = "txtKullanici";
+            this.txtKullanici.Size = new System.Drawing.Size(142, 20);
+            this.txtKullanici.TabIndex = 11;
+            this.txtKullanici.TextChanged += new System.EventHandler(this.txtBoxKullanici_TextChanged);
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(488, 291);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(142, 20);
+            this.txtSifre.TabIndex = 12;
+            // 
             // FrmGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.txtKullanici);
+            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.rdnBtnOgretmen);
             this.Controls.Add(this.rdnBtnOgrenci);
@@ -150,7 +150,6 @@
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Giriş Ekranı";
-            this.Load += new System.EventHandler(this.FrmGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).EndInit();
             this.ResumeLayout(false);
@@ -165,10 +164,10 @@
         private MetroFramework.Controls.MetroRadioButton rdnBtnOgrenci;
         private MetroFramework.Controls.MetroRadioButton rdnBtnOgretmen;
         private MetroFramework.Controls.MetroLabel lblKullaniciAdi;
-        private MetroFramework.Controls.MetroTextBox txtKullanici;
         private MetroFramework.Controls.MetroLabel lblSifre;
-        private MetroFramework.Controls.MetroTextBox txtSifre;
         private MetroFramework.Controls.MetroButton btnGiris;
+        private System.Windows.Forms.TextBox txtKullanici;
+        private System.Windows.Forms.TextBox txtSifre;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace YazilimSinama
 {
@@ -18,36 +19,23 @@ namespace YazilimSinama
         }
         OgrenciGiris ogrencigirisyapalim = new OgrenciGiris();
         OgretmenGiris ogretmengirisyapalim = new OgretmenGiris();
-
-        private void FrmGiris_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtKullanici_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroRadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     
             private void btnGiris_Click(object sender, EventArgs e)
             {
-                if (txtKullanici.Text == string.Empty || txtSifre.Text == string.Empty)
+                /*if (txtKullanici.Text == string.Empty || txtSifre.Text == string.Empty)
                 {
                     MessageBox.Show("Lütfen Kullanici Adi Ve Sifreni Gir..");
 
-                }
+                }*/
                 if (rdnBtnOgrenci.Checked == true)
                 {
-                    ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text);
-                    FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
-                    ogrenciyeGecis.Show();
-                    this.Hide();
-                }
+                ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text, this);
+                txtKullanici.Text = "";
+                txtSifre.Text = "";
+                /*FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
+                ogrenciyeGecis.Show();
+                this.Hide();*/
+            }
                 if (rdnBtnOgretmen.Checked == true)
                 {
                     ogretmengirisyapalim.OgretmengirisYap(txtKullanici.Text, txtSifre.Text);
@@ -57,5 +45,11 @@ namespace YazilimSinama
                 }
 
             }
+
+        private void txtBoxKullanici_TextChanged(object sender, EventArgs e)
+        {
+            txtKullanici.Text = txtKullanici.Text.ToLower();
+            txtKullanici.SelectionStart = txtKullanici.Text.Length;
+        }
     }
 }
