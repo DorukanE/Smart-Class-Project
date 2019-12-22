@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +39,9 @@
             this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çIKIŞYAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.akilliSinifDataSet = new YazilimSinama.AkilliSinifDataSet();
+            
             this.tblOgrenciBilgiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_OgrenciBilgiTableAdapter = new YazilimSinama.AkilliSinifDataSetTableAdapters.tbl_OgrenciBilgiTableAdapter();
+            
             this.ogrenciIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +56,11 @@
             this.columnHeaderCinsiyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderSinavTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProfilim = new System.Windows.Forms.PictureBox();
             this.menuStripOgrenci.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.akilliSinifDataSet)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilim)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripOgrenci
@@ -96,7 +96,7 @@
             this.istatiklerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.istatiklerToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.images;
             this.istatiklerToolStripMenuItem.Name = "istatiklerToolStripMenuItem";
-            this.istatiklerToolStripMenuItem.Size = new System.Drawing.Size(164, 29);
+            this.istatiklerToolStripMenuItem.Size = new System.Drawing.Size(164, 25);
             this.istatiklerToolStripMenuItem.Text = "İSTATİSTİKLERİM";
             // 
             // barGrafikToolStripMenuItem
@@ -129,7 +129,7 @@
             this.cikisToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cikisToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exit;
             this.cikisToolStripMenuItem.Name = "cikisToolStripMenuItem";
-            this.cikisToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.cikisToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.cikisToolStripMenuItem.Text = "ÇIKIŞ";
             // 
             // çIKIŞYAPToolStripMenuItem
@@ -144,23 +144,22 @@
             // 
             // akilliSinifDataSet
             // 
-            this.akilliSinifDataSet.DataSetName = "AkilliSinifDataSet";
-            this.akilliSinifDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // tblOgrenciBilgiBindingSource
             // 
             this.tblOgrenciBilgiBindingSource.DataMember = "tbl_OgrenciBilgi";
-            this.tblOgrenciBilgiBindingSource.DataSource = this.akilliSinifDataSet;
+            
             // 
             // tbl_OgrenciBilgiTableAdapter
             // 
-            this.tbl_OgrenciBilgiTableAdapter.ClearBeforeFill = true;
+           
             // 
             // ogrenciIDDataGridViewTextBoxColumn
             // 
             this.ogrenciIDDataGridViewTextBoxColumn.DataPropertyName = "ogrenciID";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.ogrenciIDDataGridViewTextBoxColumn.HeaderText = "ogrenciID";
             this.ogrenciIDDataGridViewTextBoxColumn.Name = "ogrenciIDDataGridViewTextBoxColumn";
             this.ogrenciIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -203,6 +202,7 @@
             // 
             // listViewProfilim
             // 
+            this.listViewProfilim.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listViewProfilim.BackColor = System.Drawing.Color.LightGreen;
             this.listViewProfilim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderAd,
@@ -213,6 +213,7 @@
             this.columnHeaderDogumTarihi});
             this.listViewProfilim.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listViewProfilim.HideSelection = false;
+            this.listViewProfilim.HoverSelection = true;
             this.listViewProfilim.Location = new System.Drawing.Point(186, 193);
             this.listViewProfilim.Name = "listViewProfilim";
             this.listViewProfilim.Size = new System.Drawing.Size(724, 204);
@@ -251,22 +252,23 @@
             this.columnHeaderDogumTarihi.Text = "Doğum Tarihi";
             this.columnHeaderDogumTarihi.Width = 138;
             // 
-            // pictureBox1
+            // pictureBoxProfilim
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxProfilim.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfilim.Image")));
+            this.pictureBoxProfilim.Location = new System.Drawing.Point(20, 193);
+            this.pictureBoxProfilim.Name = "pictureBoxProfilim";
+            this.pictureBoxProfilim.Size = new System.Drawing.Size(160, 204);
+            this.pictureBoxProfilim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfilim.TabIndex = 2;
+            this.pictureBoxProfilim.TabStop = false;
+            this.pictureBoxProfilim.Click += new System.EventHandler(this.pictureBoxProfilim_Click);
             // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 516);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxProfilim);
             this.Controls.Add(this.listViewProfilim);
             this.Controls.Add(this.menuStripOgrenci);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -276,9 +278,9 @@
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
             this.menuStripOgrenci.ResumeLayout(false);
             this.menuStripOgrenci.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.akilliSinifDataSet)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,9 +296,9 @@
         private System.Windows.Forms.ToolStripMenuItem cikisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çIKIŞYAPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sinavaBaslaToolStripMenuItem;
-        private AkilliSinifDataSet akilliSinifDataSet;
+        
         private System.Windows.Forms.BindingSource tblOgrenciBilgiBindingSource;
-        private AkilliSinifDataSetTableAdapters.tbl_OgrenciBilgiTableAdapter tbl_OgrenciBilgiTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciAdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciSoyadDataGridViewTextBoxColumn;
@@ -311,6 +313,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderCinsiyet;
         private System.Windows.Forms.ColumnHeader columnHeaderSinavTarihi;
         private System.Windows.Forms.ColumnHeader columnHeaderDogumTarihi;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxProfilim;
     }
 }

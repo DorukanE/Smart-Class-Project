@@ -38,15 +38,17 @@
             this.pictureBoxOgrenci = new System.Windows.Forms.PictureBox();
             this.txtKullanici = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdnBtnOgrenci
             // 
             this.rdnBtnOgrenci.AutoSize = true;
             this.rdnBtnOgrenci.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.rdnBtnOgrenci.Location = new System.Drawing.Point(218, 167);
+            this.rdnBtnOgrenci.Location = new System.Drawing.Point(98, 178);
             this.rdnBtnOgrenci.Name = "rdnBtnOgrenci";
             this.rdnBtnOgrenci.Size = new System.Drawing.Size(98, 15);
             this.rdnBtnOgrenci.TabIndex = 2;
@@ -58,7 +60,7 @@
             // 
             this.rdnBtnOgretmen.AutoSize = true;
             this.rdnBtnOgretmen.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.rdnBtnOgretmen.Location = new System.Drawing.Point(453, 167);
+            this.rdnBtnOgretmen.Location = new System.Drawing.Point(333, 178);
             this.rdnBtnOgretmen.Name = "rdnBtnOgretmen";
             this.rdnBtnOgretmen.Size = new System.Drawing.Size(112, 15);
             this.rdnBtnOgretmen.TabIndex = 3;
@@ -71,7 +73,7 @@
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.lblKullaniciAdi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(180, 231);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(60, 242);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(155, 19);
             this.lblKullaniciAdi.TabIndex = 4;
@@ -81,7 +83,7 @@
             // 
             this.lblSifre.AutoSize = true;
             this.lblSifre.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSifre.Location = new System.Drawing.Point(180, 292);
+            this.lblSifre.Location = new System.Drawing.Point(60, 303);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(91, 19);
             this.lblSifre.TabIndex = 8;
@@ -90,7 +92,7 @@
             // btnGiris
             // 
             this.btnGiris.Highlight = true;
-            this.btnGiris.Location = new System.Drawing.Point(336, 346);
+            this.btnGiris.Location = new System.Drawing.Point(216, 357);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(84, 28);
             this.btnGiris.TabIndex = 10;
@@ -100,7 +102,7 @@
             // pictureBoxOgretmen
             // 
             this.pictureBoxOgretmen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOgretmen.Image")));
-            this.pictureBoxOgretmen.Location = new System.Drawing.Point(441, 63);
+            this.pictureBoxOgretmen.Location = new System.Drawing.Point(321, 74);
             this.pictureBoxOgretmen.Name = "pictureBoxOgretmen";
             this.pictureBoxOgretmen.Size = new System.Drawing.Size(140, 97);
             this.pictureBoxOgretmen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +112,7 @@
             // pictureBoxOgrenci
             // 
             this.pictureBoxOgrenci.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOgrenci.Image")));
-            this.pictureBoxOgrenci.Location = new System.Drawing.Point(195, 63);
+            this.pictureBoxOgrenci.Location = new System.Drawing.Point(75, 74);
             this.pictureBoxOgrenci.Name = "pictureBoxOgrenci";
             this.pictureBoxOgrenci.Size = new System.Drawing.Size(147, 97);
             this.pictureBoxOgrenci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +121,7 @@
             // 
             // txtKullanici
             // 
-            this.txtKullanici.Location = new System.Drawing.Point(488, 229);
+            this.txtKullanici.Location = new System.Drawing.Point(368, 240);
             this.txtKullanici.Name = "txtKullanici";
             this.txtKullanici.Size = new System.Drawing.Size(142, 20);
             this.txtKullanici.TabIndex = 11;
@@ -127,17 +129,33 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(488, 291);
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(368, 302);
+            this.txtSifre.MaxLength = 15;
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(142, 20);
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(142, 22);
             this.txtSifre.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(510, 357);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmGiris
             // 
             this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(581, 425);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullanici);
             this.Controls.Add(this.btnGiris);
@@ -150,9 +168,11 @@
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Giriş Ekranı";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGiris_FormClosing);
             this.Load += new System.EventHandler(this.FrmGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +189,7 @@
         private MetroFramework.Controls.MetroButton btnGiris;
         private System.Windows.Forms.TextBox txtKullanici;
         private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

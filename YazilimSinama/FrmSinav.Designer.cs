@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSinav));
             this.lblSayac = new MetroFramework.Controls.MetroLabel();
             this.timersure = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxClock = new System.Windows.Forms.PictureBox();
-            this.progressBarSure = new MetroFramework.Controls.MetroProgressBar();
-            this.btnASecenegi = new MetroFramework.Controls.MetroButton();
-            this.btnBSecenegi = new MetroFramework.Controls.MetroButton();
-            this.btnCSecenegi = new MetroFramework.Controls.MetroButton();
-            this.btnDSecenegi = new MetroFramework.Controls.MetroButton();
-            this.btnESecenegi = new MetroFramework.Controls.MetroButton();
-            this.txtASecenegi = new MetroFramework.Controls.MetroTextBox();
-            this.txtBSecenegi = new MetroFramework.Controls.MetroTextBox();
-            this.txtCSecenegi = new MetroFramework.Controls.MetroTextBox();
-            this.txtDSecenegi = new MetroFramework.Controls.MetroTextBox();
-            this.txtESecenegi = new MetroFramework.Controls.MetroTextBox();
-            this.txtSoruMetni = new System.Windows.Forms.TextBox();
+            this.btnSinavaBasla = new MetroFramework.Controls.MetroButton();
+            this.btnAsecenegi = new MetroFramework.Controls.MetroButton();
+            this.btnBsecenegi = new MetroFramework.Controls.MetroButton();
+            this.btnCsecenegi = new MetroFramework.Controls.MetroButton();
+            this.btnDsecenegi = new MetroFramework.Controls.MetroButton();
+            this.SürePictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSoruMetni = new MetroFramework.Controls.MetroLabel();
+            this.btnSinaviBitir = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSayac
@@ -52,7 +52,7 @@
             this.lblSayac.AutoSize = true;
             this.lblSayac.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblSayac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSayac.Location = new System.Drawing.Point(745, 72);
+            this.lblSayac.Location = new System.Drawing.Point(721, 30);
             this.lblSayac.Name = "lblSayac";
             this.lblSayac.Size = new System.Drawing.Size(32, 25);
             this.lblSayac.TabIndex = 11;
@@ -68,127 +68,124 @@
             // pictureBoxClock
             // 
             this.pictureBoxClock.Image = global::YazilimSinama.Properties.Resources.alarm__clock__time__alert__bell__alarmicon__firealarm__siren_512;
-            this.pictureBoxClock.Location = new System.Drawing.Point(703, 72);
+            this.pictureBoxClock.Location = new System.Drawing.Point(679, 30);
             this.pictureBoxClock.Name = "pictureBoxClock";
             this.pictureBoxClock.Size = new System.Drawing.Size(33, 25);
             this.pictureBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxClock.TabIndex = 12;
             this.pictureBoxClock.TabStop = false;
             // 
-            // progressBarSure
+            // btnSinavaBasla
             // 
-            this.progressBarSure.Location = new System.Drawing.Point(18, 78);
-            this.progressBarSure.Name = "progressBarSure";
-            this.progressBarSure.Size = new System.Drawing.Size(659, 19);
-            this.progressBarSure.TabIndex = 13;
-            this.progressBarSure.Value = 50;
+            this.btnSinavaBasla.Location = new System.Drawing.Point(285, 372);
+            this.btnSinavaBasla.Name = "btnSinavaBasla";
+            this.btnSinavaBasla.Size = new System.Drawing.Size(111, 55);
+            this.btnSinavaBasla.TabIndex = 25;
+            this.btnSinavaBasla.Text = "Sınava Başla";
+            this.btnSinavaBasla.Click += new System.EventHandler(this.btnSinavaBasla_Click);
             // 
-            // btnASecenegi
+            // btnAsecenegi
             // 
-            this.btnASecenegi.Location = new System.Drawing.Point(238, 209);
-            this.btnASecenegi.Name = "btnASecenegi";
-            this.btnASecenegi.Size = new System.Drawing.Size(42, 23);
-            this.btnASecenegi.TabIndex = 14;
-            this.btnASecenegi.Text = "A)";
+            this.btnAsecenegi.Location = new System.Drawing.Point(261, 190);
+            this.btnAsecenegi.Name = "btnAsecenegi";
+            this.btnAsecenegi.Size = new System.Drawing.Size(135, 52);
+            this.btnAsecenegi.TabIndex = 26;
+            this.btnAsecenegi.Click += new System.EventHandler(this.btnAsecenegi_Click);
+            this.btnAsecenegi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnDsecenegi_MouseClick);
             // 
-            // btnBSecenegi
+            // btnBsecenegi
             // 
-            this.btnBSecenegi.Location = new System.Drawing.Point(238, 238);
-            this.btnBSecenegi.Name = "btnBSecenegi";
-            this.btnBSecenegi.Size = new System.Drawing.Size(42, 23);
-            this.btnBSecenegi.TabIndex = 15;
-            this.btnBSecenegi.Text = "B)";
+            this.btnBsecenegi.Location = new System.Drawing.Point(485, 190);
+            this.btnBsecenegi.Name = "btnBsecenegi";
+            this.btnBsecenegi.Size = new System.Drawing.Size(139, 52);
+            this.btnBsecenegi.TabIndex = 27;
+            this.btnBsecenegi.Click += new System.EventHandler(this.btnBsecenegi_Click);
+            this.btnBsecenegi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnDsecenegi_MouseClick);
             // 
-            // btnCSecenegi
+            // btnCsecenegi
             // 
-            this.btnCSecenegi.Location = new System.Drawing.Point(238, 267);
-            this.btnCSecenegi.Name = "btnCSecenegi";
-            this.btnCSecenegi.Size = new System.Drawing.Size(42, 23);
-            this.btnCSecenegi.TabIndex = 16;
-            this.btnCSecenegi.Text = "C)";
+            this.btnCsecenegi.Location = new System.Drawing.Point(261, 288);
+            this.btnCsecenegi.Name = "btnCsecenegi";
+            this.btnCsecenegi.Size = new System.Drawing.Size(135, 48);
+            this.btnCsecenegi.TabIndex = 28;
+            this.btnCsecenegi.Click += new System.EventHandler(this.btnCsecenegi_Click);
+            this.btnCsecenegi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnDsecenegi_MouseClick);
             // 
-            // btnDSecenegi
+            // btnDsecenegi
             // 
-            this.btnDSecenegi.Location = new System.Drawing.Point(238, 296);
-            this.btnDSecenegi.Name = "btnDSecenegi";
-            this.btnDSecenegi.Size = new System.Drawing.Size(42, 23);
-            this.btnDSecenegi.TabIndex = 17;
-            this.btnDSecenegi.Text = "D)";
+            this.btnDsecenegi.Location = new System.Drawing.Point(489, 288);
+            this.btnDsecenegi.Name = "btnDsecenegi";
+            this.btnDsecenegi.Size = new System.Drawing.Size(135, 48);
+            this.btnDsecenegi.TabIndex = 29;
+            this.btnDsecenegi.Click += new System.EventHandler(this.btnDsecenegi_Click);
+            this.btnDsecenegi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnDsecenegi_MouseClick);
             // 
-            // btnESecenegi
+            // SürePictureBox
             // 
-            this.btnESecenegi.Location = new System.Drawing.Point(238, 325);
-            this.btnESecenegi.Name = "btnESecenegi";
-            this.btnESecenegi.Size = new System.Drawing.Size(42, 23);
-            this.btnESecenegi.TabIndex = 18;
-            this.btnESecenegi.Text = "E)";
+            this.SürePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SürePictureBox.Image")));
+            this.SürePictureBox.Location = new System.Drawing.Point(44, 190);
+            this.SürePictureBox.Name = "SürePictureBox";
+            this.SürePictureBox.Size = new System.Drawing.Size(177, 199);
+            this.SürePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SürePictureBox.TabIndex = 30;
+            this.SürePictureBox.TabStop = false;
             // 
-            // txtASecenegi
+            // pictureBox1
             // 
-            this.txtASecenegi.Location = new System.Drawing.Point(317, 208);
-            this.txtASecenegi.Name = "txtASecenegi";
-            this.txtASecenegi.Size = new System.Drawing.Size(102, 23);
-            this.txtASecenegi.TabIndex = 19;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(680, 372);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtBSecenegi
+            // lblSoruMetni
             // 
-            this.txtBSecenegi.Location = new System.Drawing.Point(317, 238);
-            this.txtBSecenegi.Name = "txtBSecenegi";
-            this.txtBSecenegi.Size = new System.Drawing.Size(102, 23);
-            this.txtBSecenegi.TabIndex = 20;
+            this.lblSoruMetni.BackColor = System.Drawing.Color.White;
+            this.lblSoruMetni.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSoruMetni.Location = new System.Drawing.Point(23, 93);
+            this.lblSoruMetni.Name = "lblSoruMetni";
+            this.lblSoruMetni.Size = new System.Drawing.Size(753, 75);
+            this.lblSoruMetni.TabIndex = 33;
+            this.lblSoruMetni.Click += new System.EventHandler(this.lblSoruMetni_Click);
             // 
-            // txtCSecenegi
+            // btnSinaviBitir
             // 
-            this.txtCSecenegi.Location = new System.Drawing.Point(317, 267);
-            this.txtCSecenegi.Name = "txtCSecenegi";
-            this.txtCSecenegi.Size = new System.Drawing.Size(102, 23);
-            this.txtCSecenegi.TabIndex = 21;
-            // 
-            // txtDSecenegi
-            // 
-            this.txtDSecenegi.Location = new System.Drawing.Point(317, 296);
-            this.txtDSecenegi.Name = "txtDSecenegi";
-            this.txtDSecenegi.Size = new System.Drawing.Size(102, 23);
-            this.txtDSecenegi.TabIndex = 22;
-            // 
-            // txtESecenegi
-            // 
-            this.txtESecenegi.Location = new System.Drawing.Point(317, 325);
-            this.txtESecenegi.Name = "txtESecenegi";
-            this.txtESecenegi.Size = new System.Drawing.Size(102, 23);
-            this.txtESecenegi.TabIndex = 23;
-            // 
-            // txtSoruMetni
-            // 
-            this.txtSoruMetni.Location = new System.Drawing.Point(141, 152);
-            this.txtSoruMetni.Multiline = true;
-            this.txtSoruMetni.Name = "txtSoruMetni";
-            this.txtSoruMetni.Size = new System.Drawing.Size(450, 20);
-            this.txtSoruMetni.TabIndex = 24;
+            this.btnSinaviBitir.Location = new System.Drawing.Point(489, 372);
+            this.btnSinaviBitir.Name = "btnSinaviBitir";
+            this.btnSinaviBitir.Size = new System.Drawing.Size(111, 55);
+            this.btnSinaviBitir.TabIndex = 34;
+            this.btnSinaviBitir.Text = "Sınavı Bitir";
+            this.btnSinaviBitir.Click += new System.EventHandler(this.btnSinaviBitir_Click);
             // 
             // FrmSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtSoruMetni);
-            this.Controls.Add(this.txtESecenegi);
-            this.Controls.Add(this.txtDSecenegi);
-            this.Controls.Add(this.txtCSecenegi);
-            this.Controls.Add(this.txtBSecenegi);
-            this.Controls.Add(this.txtASecenegi);
-            this.Controls.Add(this.btnESecenegi);
-            this.Controls.Add(this.btnDSecenegi);
-            this.Controls.Add(this.btnCSecenegi);
-            this.Controls.Add(this.btnBSecenegi);
-            this.Controls.Add(this.btnASecenegi);
-            this.Controls.Add(this.progressBarSure);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(785, 467);
+            this.Controls.Add(this.btnSinaviBitir);
+            this.Controls.Add(this.lblSoruMetni);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.SürePictureBox);
+            this.Controls.Add(this.btnDsecenegi);
+            this.Controls.Add(this.btnCsecenegi);
+            this.Controls.Add(this.btnBsecenegi);
+            this.Controls.Add(this.btnAsecenegi);
+            this.Controls.Add(this.btnSinavaBasla);
             this.Controls.Add(this.pictureBoxClock);
             this.Controls.Add(this.lblSayac);
+            this.DisplayHeader = false;
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "FrmSinav";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "Sınav Olma Ekranı";
             this.Load += new System.EventHandler(this.FrmSinav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,17 +195,14 @@
         private MetroFramework.Controls.MetroLabel lblSayac;
         private System.Windows.Forms.Timer timersure;
         private System.Windows.Forms.PictureBox pictureBoxClock;
-        private MetroFramework.Controls.MetroProgressBar progressBarSure;
-        private MetroFramework.Controls.MetroButton btnASecenegi;
-        private MetroFramework.Controls.MetroButton btnBSecenegi;
-        private MetroFramework.Controls.MetroButton btnCSecenegi;
-        private MetroFramework.Controls.MetroButton btnDSecenegi;
-        private MetroFramework.Controls.MetroButton btnESecenegi;
-        private MetroFramework.Controls.MetroTextBox txtASecenegi;
-        private MetroFramework.Controls.MetroTextBox txtBSecenegi;
-        private MetroFramework.Controls.MetroTextBox txtCSecenegi;
-        private MetroFramework.Controls.MetroTextBox txtDSecenegi;
-        private MetroFramework.Controls.MetroTextBox txtESecenegi;
-        private System.Windows.Forms.TextBox txtSoruMetni;
+        private MetroFramework.Controls.MetroButton btnSinavaBasla;
+        private MetroFramework.Controls.MetroButton btnAsecenegi;
+        private MetroFramework.Controls.MetroButton btnBsecenegi;
+        private MetroFramework.Controls.MetroButton btnCsecenegi;
+        private MetroFramework.Controls.MetroButton btnDsecenegi;
+        private System.Windows.Forms.PictureBox SürePictureBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLabel lblSoruMetni;
+        private MetroFramework.Controls.MetroButton btnSinaviBitir;
     }
 }

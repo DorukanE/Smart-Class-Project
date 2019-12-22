@@ -40,7 +40,8 @@ namespace YazilimSinama
 
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
-           
+            listViewProfilim.Visible = false;
+            pictureBoxProfilim.Visible = false;
 
         }
 
@@ -84,7 +85,9 @@ namespace YazilimSinama
 
         private void profilimToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            profiligoster();
+           listViewProfilim.Visible = true;
+           pictureBoxProfilim.Visible = true;
+           profiligoster();
             
         }
 
@@ -95,10 +98,15 @@ namespace YazilimSinama
 
         private void listViewProfilim_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void menuStripOgrenci_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pictureBoxProfilim_Click(object sender, EventArgs e)
         {
 
         }

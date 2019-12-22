@@ -56,11 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AkilliSinifDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AkilliSinifDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="FrmBarGrafigi.cs">
       <SubType>Form</SubType>
@@ -130,17 +125,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="AkilliSinifDataSet.xsc">
-      <DependentUpon>AkilliSinifDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AkilliSinifDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AkilliSinifDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AkilliSinifDataSet.xss">
-      <DependentUpon>AkilliSinifDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
