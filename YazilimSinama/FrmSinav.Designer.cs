@@ -182,6 +182,7 @@
             this.Name = "FrmSinav";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "Sınav Olma Ekranı";
+            this.TransparencyKey = System.Drawing.Color.DimGray;
             this.Load += new System.EventHandler(this.FrmSinav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).EndInit();
