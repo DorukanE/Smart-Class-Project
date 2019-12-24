@@ -14,7 +14,7 @@ namespace YazilimSinama
         }
 
         Database dbislemleri = new Database();
-       
+        SoruObjesi donecekSoru = new SoruObjesi();
 
 
         private void FrmSinav_Load(object sender, EventArgs e)
@@ -23,8 +23,90 @@ namespace YazilimSinama
             
         }
 
-        
-       
+        public void YeniSoru()
+        {
+            SoruGetir();
+            lblSoruMetni.Text = donecekSoru.soru.Trim();
+            Random rnd = new Random();
+            int dogruSecenek = rnd.Next(1, 4);
+            if (dogruSecenek == 1)
+            {
+                btnAsecenegi.Text = donecekSoru.dogruCevap;
+                btnBsecenegi.Text = soruIcinSecenekGetir();
+                btnCsecenegi.Text = soruIcinSecenekGetir();
+                btnDsecenegi.Text = soruIcinSecenekGetir();
+            }
+            else if (dogruSecenek == 2)
+            {
+                btnAsecenegi.Text = soruIcinSecenekGetir();
+                btnBsecenegi.Text = donecekSoru.dogruCevap;
+                btnCsecenegi.Text = soruIcinSecenekGetir();
+                btnDsecenegi.Text = soruIcinSecenekGetir();
+            }
+            else if (dogruSecenek == 3)
+            {
+                btnAsecenegi.Text = soruIcinSecenekGetir();
+                btnBsecenegi.Text = soruIcinSecenekGetir();
+                btnCsecenegi.Text = donecekSoru.dogruCevap;
+                btnDsecenegi.Text = soruIcinSecenekGetir();
+            }
+            else if (dogruSecenek == 4)
+            {
+                btnAsecenegi.Text = soruIcinSecenekGetir();
+                btnBsecenegi.Text = soruIcinSecenekGetir();
+                btnCsecenegi.Text = soruIcinSecenekGetir();
+                btnDsecenegi.Text = donecekSoru.dogruCevap;
+            }
+        }
+        public SoruObjesi SoruGetir()
+        {
+            Database dbislemleri = new Database();
+            DataTable dt = new DataTable();
+            string sorgu = "SELECT * FROM tbl_Soru WHERE kacinciOgrenme = 0 ";
+            dt = dbislemleri.VeriTablosuDondur(sorgu);
+            if (dt.Rows.Count == 0)
+            {
+                dt = dbislemleri.VeriTablosuDondur("SELECT * FROM tbl_Soru where kacinciOgrenme = -1");
+                if (dt.Rows.Count == 0)
+                {
+                    dt = dbislemleri.VeriTablosuDondur("SELECT * FROM tbl_Soru where kacinciOgrenme = 1");
+                    if (dt.Rows.Count == 0)
+                    {
+                        SoruObjesi soru = new SoruObjesi();
+                        donecekSoru = soru;
+                        return soru;
+                    }
+                }
+            }
+            Random rnd = new Random();
+            int sayi = rnd.Next(0, dt.Rows.Count);
+            DataRow k = dt.NewRow();
+            k = dt.Rows[sayi];
+            donecekSoru.soruID = Convert.ToInt32(k[0].ToString());
+            donecekSoru.soru = k[1].ToString();
+            donecekSoru.dogruCevap = k[2].ToString();
+            donecekSoru.kacinciOgrenme = Convert.ToInt32(k[3].ToString());
+            return donecekSoru;
+        }
+
+        Random rnd = new Random();
+        public String soruIcinSecenekGetir()
+        {
+            string kelime = "";
+            do
+            {
+                Database dbislemleri = new Database();
+                DataTable dt = new DataTable();
+                dt = dbislemleri.VeriTablosuDondur("SELECT dogruCevap FROM tbl_Soru");
+
+                int sayi = rnd.Next(0, dt.Rows.Count);
+                kelime = dt.Rows[sayi][0].ToString();
+
+
+            } while (kelime == donecekSoru.dogruCevap);
+            return kelime;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -56,6 +138,7 @@ namespace YazilimSinama
         private void btnSinavaBasla_Click(object sender, EventArgs e)
         {
             YeniSoru();
+            btnSinavaBasla.Visible = false;
 
         }
 
@@ -122,22 +205,22 @@ namespace YazilimSinama
             this.Hide();
         }
 
-        public void lblSoruMetni_Click(object sender, EventArgs e)
+        private void lblSoruMetni_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void btnCsecenegi_Click(object sender, EventArgs e)
+        private void btnCsecenegi_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void btnBsecenegi_Click(object sender, EventArgs e)
+        private void btnBsecenegi_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void btnDsecenegi_Click(object sender, EventArgs e)
+        private void btnDsecenegi_Click(object sender, EventArgs e)
         {
 
         }
