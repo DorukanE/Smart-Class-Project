@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace YazilimSinama
 {
-    public partial class FrmBarGrafigi : MetroFramework.Forms.MetroForm
+    public partial class FrmBasariGrafigi : MetroFramework.Forms.MetroForm
     {
-        public FrmBarGrafigi()
+        public FrmBasariGrafigi()
         {
             InitializeComponent();
         }
@@ -25,8 +25,9 @@ namespace YazilimSinama
             SqlDataReader read = command.ExecuteReader();
             while (read.Read())
             {
-                chartBasari.Series["DoğruCevap"].Points.AddXY(read[0].ToString(), read[1].ToString());
+                chartBasari.Series["Doğru Cevap"].Points.AddPoint(Convert.ToString(read[0]), int.Parse(read[1].ToString()));
             }
+            dbIslem.baglanti.Close();
         }
     }
 }

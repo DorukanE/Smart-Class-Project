@@ -158,6 +158,7 @@ namespace YazilimSinama
             Database dbislemleri = new Database();
             if (buton.Text == donecekSoru.dogruCevap)
             {
+                dbislemleri.sorguCalistir("UPDATE tbl_Soru set dogruSayisi = (dogruSayisi + 1) where soruID = " + donecekSoru.soruID);
                 if (donecekSoru.kacinciOgrenme == 1)
                 {
                     dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = -2 where soruID = " + donecekSoru.soruID);

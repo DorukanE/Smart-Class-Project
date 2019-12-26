@@ -57,7 +57,7 @@ namespace YazilimSinama
 
         private void bARGRAFİĞİToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBarGrafigi barGrafigineGecis = new FrmBarGrafigi();
+            FrmBasariGrafigi barGrafigineGecis = new FrmBasariGrafigi();
             barGrafigineGecis.Show();
             this.Hide();
         }

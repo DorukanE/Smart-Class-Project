@@ -1,6 +1,6 @@
 ﻿namespace YazilimSinama
 {
-    partial class FrmBarGrafigi
+    partial class FrmBasariGrafigi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,66 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chartBasari = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblGrafKonu = new MetroFramework.Controls.MetroLabel();
+            DevExpress.XtraCharts.XYDiagram3D xyDiagram3D1 = new DevExpress.XtraCharts.XYDiagram3D();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBar3DSeriesView sideBySideBar3DSeriesView1 = new DevExpress.XtraCharts.SideBySideBar3DSeriesView();
+            this.chartBasari = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.chartBasari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // chartBasari
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBasari.ChartAreas.Add(chartArea1);
+            this.chartBasari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(141)))), ((int)(((byte)(212)))));
+            this.chartBasari.BorderOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chartBasari.BorderOptions.Thickness = 2;
+            this.chartBasari.DataBindings = null;
+            xyDiagram3D1.HorizontalScrollPercent = 3.0065015596226852D;
+            xyDiagram3D1.RotationMatrixSerializable = "0.832363923225189;-0.103311080484192;0.544515491021493;0;0.00961894000972918;0.98" +
+    "5017858088284;0.172183899480389;0;-0.554145987359176;-0.138082004245203;0.820887" +
+    "071890753;0;0;0;0;1";
+            xyDiagram3D1.VerticalScrollPercent = -0.80201037266748709D;
+            xyDiagram3D1.ZoomPercent = 120;
+            this.chartBasari.Diagram = xyDiagram3D1;
             this.chartBasari.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartBasari.Legends.Add(legend1);
+            this.chartBasari.Legend.Name = "Default Legend";
             this.chartBasari.Location = new System.Drawing.Point(20, 60);
             this.chartBasari.Name = "chartBasari";
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series1.ChartArea = "ChartArea1";
-            series1.CustomProperties = "DrawingStyle=LightToDark";
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            series1.Legend = "Legend1";
-            series1.Name = "DoğruCevap";
-            series1.YValuesPerPoint = 2;
-            this.chartBasari.Series.Add(series1);
-            this.chartBasari.Size = new System.Drawing.Size(1007, 339);
+            this.chartBasari.Padding.Bottom = 20;
+            this.chartBasari.Padding.Left = 20;
+            this.chartBasari.Padding.Right = 20;
+            this.chartBasari.Padding.Top = 20;
+            this.chartBasari.PaletteName = "Equity";
+            series1.Name = "Doğru Cevap";
+            sideBySideBar3DSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(55)))), ((int)(((byte)(52)))));
+            series1.View = sideBySideBar3DSeriesView1;
+            this.chartBasari.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartBasari.Size = new System.Drawing.Size(497, 333);
             this.chartBasari.TabIndex = 0;
-            this.chartBasari.Text = "chart1";
             // 
-            // lblGrafKonu
-            // 
-            this.lblGrafKonu.AutoSize = true;
-            this.lblGrafKonu.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblGrafKonu.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblGrafKonu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblGrafKonu.Location = new System.Drawing.Point(903, 345);
-            this.lblGrafKonu.Name = "lblGrafKonu";
-            this.lblGrafKonu.Size = new System.Drawing.Size(79, 25);
-            this.lblGrafKonu.TabIndex = 1;
-            this.lblGrafKonu.Text = "Konular";
-            // 
-            // FrmBarGrafigi
+            // FrmBasariGrafigi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 419);
-            this.Controls.Add(this.lblGrafKonu);
+            this.ClientSize = new System.Drawing.Size(537, 413);
             this.Controls.Add(this.chartBasari);
-            this.Name = "FrmBarGrafigi";
-            this.Text = "Öğrenci Bar Grafiği";
+            this.Name = "FrmBasariGrafigi";
+            this.Text = "Öğrenci Başarı Grafiği";
             this.Load += new System.EventHandler(this.FrmBarGrafigi_Load);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBasari)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartBasari;
-        private MetroFramework.Controls.MetroLabel lblGrafKonu;
+        private DevExpress.XtraCharts.ChartControl chartBasari;
     }
 }
