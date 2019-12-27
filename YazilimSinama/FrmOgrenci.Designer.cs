@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +39,7 @@
             this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çIKIŞYAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            
             this.tblOgrenciBilgiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.ogrenciIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +56,6 @@
             this.columnHeaderDogumTarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBoxProfilim = new System.Windows.Forms.PictureBox();
             this.menuStripOgrenci.SuspendLayout();
-            
             ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilim)).BeginInit();
             this.SuspendLayout();
@@ -69,8 +66,8 @@
             this.menuStripOgrenci.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuStripOgrenci.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profilimToolStripMenuItem,
-            this.istatiklerToolStripMenuItem,
             this.sinavaBaslaToolStripMenuItem,
+            this.istatiklerToolStripMenuItem,
             this.cikisToolStripMenuItem});
             this.menuStripOgrenci.Location = new System.Drawing.Point(20, 60);
             this.menuStripOgrenci.Name = "menuStripOgrenci";
@@ -142,24 +139,15 @@
             this.çIKIŞYAPToolStripMenuItem.Text = "ÇIKIŞ YAP";
             this.çIKIŞYAPToolStripMenuItem.Click += new System.EventHandler(this.çIKIŞYAPToolStripMenuItem_Click);
             // 
-            // akilliSinifDataSet
-            // 
-            
-            // 
             // tblOgrenciBilgiBindingSource
             // 
             this.tblOgrenciBilgiBindingSource.DataMember = "tbl_OgrenciBilgi";
-            
-            // 
-            // tbl_OgrenciBilgiTableAdapter
-            // 
-           
             // 
             // ogrenciIDDataGridViewTextBoxColumn
             // 
             this.ogrenciIDDataGridViewTextBoxColumn.DataPropertyName = "ogrenciID";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.ogrenciIDDataGridViewTextBoxColumn.HeaderText = "ogrenciID";
             this.ogrenciIDDataGridViewTextBoxColumn.Name = "ogrenciIDDataGridViewTextBoxColumn";
             this.ogrenciIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -278,7 +266,6 @@
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
             this.menuStripOgrenci.ResumeLayout(false);
             this.menuStripOgrenci.PerformLayout();
-            
             ((System.ComponentModel.ISupportInitialize)(this.tblOgrenciBilgiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilim)).EndInit();
             this.ResumeLayout(false);
