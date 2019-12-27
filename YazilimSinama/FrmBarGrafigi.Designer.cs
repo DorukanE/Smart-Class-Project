@@ -65,7 +65,7 @@ namespace YazilimSinama
             this.chartBasari.Padding.Right = 20;
             this.chartBasari.Padding.Top = 20;
             this.chartBasari.PaletteName = "Equity";
-            series1.Name = "Doğru Cevap";
+            series1.Name = "Doğru Cevap Yüzdelik";
             sideBySideBar3DSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(55)))), ((int)(((byte)(52)))));
             series1.View = sideBySideBar3DSeriesView1;
             this.chartBasari.SeriesSerializable = new DevExpress.XtraCharts.Series[] {

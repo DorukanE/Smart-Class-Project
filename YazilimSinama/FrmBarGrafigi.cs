@@ -25,7 +25,7 @@ namespace YazilimSinama
             SqlDataReader read = command.ExecuteReader();
             while (read.Read())
             {
-                chartBasari.Series["Doğru Cevap"].Points.AddPoint(Convert.ToString(read[0]), int.Parse(read[1].ToString()));
+                chartBasari.Series["Doğru Cevap Yüzdelik"].Points.AddPoint(Convert.ToString(read[0]), int.Parse(read[1].ToString()));
             }
             dbIslem.baglanti.Close();
         }
