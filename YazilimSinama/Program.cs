@@ -16,7 +16,7 @@ namespace YazilimSinama
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCubukGrafigi());
+            Application.Run(new FrmSinav());
         }
     }
 }

@@ -58,7 +58,6 @@
             this.lblSayac.Size = new System.Drawing.Size(32, 25);
             this.lblSayac.TabIndex = 11;
             this.lblSayac.Text = "60";
-            this.lblSayac.Click += new System.EventHandler(this.lblSayac_Click);
             // 
             // timersure
             // 

@@ -112,11 +112,6 @@ namespace YazilimSinama
 
         }
 
-        private void lblSayac_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timersure_Tick(object sender, EventArgs e)
         {
             int sure = int.Parse(lblSayac.Text);
@@ -126,14 +121,14 @@ namespace YazilimSinama
             {
                 timersure.Stop();
                 MessageBox.Show("Bu soru için ayrılan süre doldu!");
+                YeniSoru();
+                lblSayac.Text = Convert.ToString(60);
+                timersure.Start();
             }
 
         }
 
-        public void txtSoruMetni_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnSinavaBasla_Click(object sender, EventArgs e)
         {
