@@ -12,9 +12,12 @@ namespace YazilimSinama
     {
         Database db = new Database();
         public string OgretmenkullaniciAdi_tut { get; set; }
+        //ogretmenin kullanıcı adını tutmak için bir nesne tanımladık.//
         public string Ogretmensifre_tut { get; set; }
+        //ogretmenin şifresini tutmak için bir nesne tanımladık.//
 
         public string OgretmengirisDurumu { get; set; }
+        //ogretmenin giriş bilgisini tutmak için bir nesne tanımladık.//
 
 
         public void OgretmengirisYap(string kullaniciAdi, string sifre)
@@ -22,35 +25,26 @@ namespace YazilimSinama
             if (db.baglanti.State == System.Data.ConnectionState.Open)
             {
                 db.baglanti.Close();
+                //baglantıyı kapattık.//
             }
             try
             {
                 db.baglanti.Open();
                 SqlCommand Ogretmengiriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgretmenGiris WHERE kullaniciAdi=@kulAdi AND sifre=@sifre", db.baglanti);
+                //kullanıcı adı ve sifre icin bir sql komutu yazdık.//
                 Ogretmengiriskomutu.Parameters.AddWithValue("@kulAdi", kullaniciAdi);
+                //kullanıcı adı parametresini yolladık.//
                 Ogretmengiriskomutu.Parameters.AddWithValue("@sifre", sifre);
+                //sifre parametresini yolladık.//
                 SqlDataReader kulAdi_Oku = Ogretmengiriskomutu.ExecuteReader();
+                // sql komutunu reader ile okuduk.//
                 if (kulAdi_Oku.Read())
                 {
                     MessageBox.Show("Giriş başarılı");
                     FrmOgretmen frmOgretmen = new FrmOgretmen();
+                    // giris basarılıysa öğretmen formuna yolladık.//
                     frmOgretmen.Show();
-                    /*OgretmenkullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
-                    SqlCommand Ogretmengiriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgretmenGiris WHERE sifre=@sifre ", db.baglanti);
-                    Ogretmengiriskomutupw.Parameters.AddWithValue("@sifre", sifre);
-                    SqlDataReader Ogretmengiriskomutupw_oku = Ogretmengiriskomutupw.ExecuteReader();
-
-                    if (Ogretmengiriskomutupw_oku.Read())
-                    {
-                        Ogretmensifre_tut = Ogretmengiriskomutupw_oku["sifre"].ToString();
-                        OgretmengirisDurumu = OgretmenkullaniciAdi_tut + " " + Ogretmensifre_tut;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kullanici Adini Yanlis Girdiniz!");
-                        Application.Exit();
-
-                    }*/
+                    
                 }
                 else
                 {

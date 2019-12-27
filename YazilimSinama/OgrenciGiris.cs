@@ -11,65 +11,57 @@ namespace YazilimSinama
     public class OgrenciGiris
     {
             Database db = new Database();
+            // database sınıfımızı çağırdık.//
             public string kullaniciAdi_tut { get; set; }
+            //ogrencinin kullanıcı adını tutmak için bir nesne tanımladık.//
             public string sifre_tut { get; set; }
+            //ogrencinin şifresini tutmak için bir nesne tanımladık.//
 
             public string girisDurumu { get; set; }
-        public void girisYap(string kullaniciAdi, string sifre)
-            {
-                if (db.baglanti.State == System.Data.ConnectionState.Open)
+            //ogretmenin giriş bilgisini tutmak için bir nesne tanımladık.//
+               public void girisYap(string kullaniciAdi, string sifre)
                 {
-                    db.baglanti.Close();
-                }
-                try
-                {
-                    db.baglanti.Open();
-                    SqlCommand giriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgrenciGiris WHERE kullaniciAdi=@kulAdi AND sifre=@sifre", db.baglanti);
-                    giriskomutu.Parameters.AddWithValue("@kulAdi", kullaniciAdi);
-                    giriskomutu.Parameters.AddWithValue("@sifre", sifre);
-                    SqlDataReader kulAdi_Oku = giriskomutu.ExecuteReader();
-                    if (kulAdi_Oku.Read())
+                    if (db.baglanti.State == System.Data.ConnectionState.Open)
                     {
-                    kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
-                    MessageBox.Show("Giriş başarılı");
-                    FrmOgrenci frmOgrenci = new FrmOgrenci();
-                    frmOgrenci.Show();
+                        db.baglanti.Close();
+                        //baglantımızı kapattık.//
+                    }
+                    try
+                    {
+                        db.baglanti.Open();
+                        //baglantımızı açtık.//
+                        SqlCommand giriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgrenciGiris WHERE kullaniciAdi=@kulAdi AND sifre=@sifre", db.baglanti);
+                        //kullanıcı adı ve sifre icin bir sql komutu yazdık.//
+                        giriskomutu.Parameters.AddWithValue("@kulAdi", kullaniciAdi);
+                        //kullanıcı adı parametresini yolladık.//
+                        giriskomutu.Parameters.AddWithValue("@sifre", sifre);
+                        //sifre parametresini yolladık.//
+                        SqlDataReader kulAdi_Oku = giriskomutu.ExecuteReader();
+                        //data reader ile komutu okuduk.//
+                        if (kulAdi_Oku.Read())
+                        {
+                         //kullanıcı adını okumaya devam ettiği sürece if kosulunu koyduk.//
+                        kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
+                        MessageBox.Show("Giriş başarılı");
+                        FrmOgrenci frmOgrenci = new FrmOgrenci();
+                        //giriş başarılıysa ögrenci formuna geçiş yaptık.//
+                        frmOgrenci.Show();
                     
-                    /*FrmOgrenci frmOgrenci = new FrmOgrenci();
-                    frmYeni.Hide();
-                    frmOgrenci.Show();*/
-
-                    /*SqlCommand giriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgrenciGiris WHERE sifre=@sifre ", db.baglanti);
-                    giriskomutupw.Parameters.AddWithValue("@sifre", sifre);
-                    SqlDataReader giriskomutupw_oku = giriskomutupw.ExecuteReader();
-
-                    if (giriskomutupw_oku.Read())
-                    {
-
-                        sifre_tut = giriskomutupw_oku["sifre"].ToString();
-                        girisDurumu = kullaniciAdi_tut + " " + sifre_tut;
+                        }
+                        else
+                        {
+                          MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz.");
+                        }
                     }
-                    else
+                    catch{ }
+
+                    finally
                     {
-                        MessageBox.Show("Kullanici Adini Yanlis Girdiniz!");
-                        Application.Exit();
-
-                    }*/
+                        db.baglanti.Close();
+                        //baglantımızı kapattık.//
                     }
-                    else
-                    {
-                        MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz.");
-                        //Application.Exit();
-                    }
-                }
-                catch{ }
-
-                finally
-                {
-                    db.baglanti.Close();
-                }
 
 
-            }
-        }
+               }
     }
+}

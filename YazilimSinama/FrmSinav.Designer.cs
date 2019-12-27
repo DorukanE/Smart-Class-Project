@@ -55,9 +55,9 @@
             this.lblSayac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblSayac.Location = new System.Drawing.Point(721, 30);
             this.lblSayac.Name = "lblSayac";
-            this.lblSayac.Size = new System.Drawing.Size(22, 25);
+            this.lblSayac.Size = new System.Drawing.Size(32, 25);
             this.lblSayac.TabIndex = 11;
-            this.lblSayac.Text = "5";
+            this.lblSayac.Text = "60";
             // 
             // timersure
             // 

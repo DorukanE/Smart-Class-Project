@@ -18,19 +18,26 @@ namespace YazilimSinama
             InitializeComponent();
         }
         Database dbislemleri = new Database();
+        //database sınıfımızı çağırdık.//
         private void konuEkle()
         {
             dbislemleri.baglanti.Open();
             SqlCommand konueklekomutu = new SqlCommand("INSERT INTO tbl_Konu (konu) VALUES ('" + txtKonu.Text.ToString() + "')", dbislemleri.baglanti);
+            //ilgili butona girilen konuyu içeri aktarmak için sql komutu yazdık.//
             konueklekomutu.ExecuteNonQuery();
+            //sql komutunu okuttuk.//
             dbislemleri.baglanti.Close();
+            //baglantıyı kapattık.//
         }
         private void soruEkle()
         {
             dbislemleri.baglanti.Open();
             SqlCommand sorueklekomutu = new SqlCommand("INSERT INTO tbl_Soru(soru,dogruCevap) VALUES ('" + txtSoru.Text.ToString() + "','" + txtDogruCevap.Text.ToString() + "')", dbislemleri.baglanti);
+            //ilgili butona girilen soruyu içeri aktarmak için sql komutu yazdık.//
             sorueklekomutu.ExecuteNonQuery();
+            //komutu okuttuk.//
             dbislemleri.baglanti.Close();
+            //baglantıyı kapattık.//
         }
         private void FrmOgretmen_Load(object sender, EventArgs e)
         {
@@ -44,6 +51,7 @@ namespace YazilimSinama
             FrmGiris anasayfayadon = new FrmGiris();
             anasayfayadon.Show();
             this.Hide();
+            //geri tusuna tıklandığında anasayfaya dönmesini sağladık.//
         }
 
         public void txtKonu_Click(object sender, EventArgs e)
@@ -53,9 +61,20 @@ namespace YazilimSinama
 
         private void btnSoruEkle_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pictureBoxOgretmen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSoruEkle_Click_1(object sender, EventArgs e)
+        {
             konuEkle();
             soruEkle();
             MessageBox.Show("Soru Başarıyla Eklendi!");
+            //butona tıkladğımızda tanımladığımız fonskiyonları çağırıp,kleme işlemini gerçekleştirdik.//
         }
     }
 }

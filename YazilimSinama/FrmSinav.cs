@@ -35,6 +35,7 @@ namespace YazilimSinama
                 btnBsecenegi.Text = soruIcinSecenekGetir();
                 btnCsecenegi.Text = soruIcinSecenekGetir();
                 btnDsecenegi.Text = soruIcinSecenekGetir();
+                //dogrusecenek 1 e eşitse doğru cevap A seçeneğindedir.//
             }
             else if (dogruSecenek == 2)
             {
@@ -42,6 +43,7 @@ namespace YazilimSinama
                 btnBsecenegi.Text = donecekSoru.dogruCevap;
                 btnCsecenegi.Text = soruIcinSecenekGetir();
                 btnDsecenegi.Text = soruIcinSecenekGetir();
+                //dogrusecenek 2 e eşitse doğru cevap B seçeneğindedir.//
             }
             else if (dogruSecenek == 3)
             {
@@ -49,6 +51,7 @@ namespace YazilimSinama
                 btnBsecenegi.Text = soruIcinSecenekGetir();
                 btnCsecenegi.Text = donecekSoru.dogruCevap;
                 btnDsecenegi.Text = soruIcinSecenekGetir();
+                //dogrusecenek 3 e eşitse doğru cevap C seçeneğindedir.//
             }
             else if (dogruSecenek == 4)
             {
@@ -56,6 +59,7 @@ namespace YazilimSinama
                 btnBsecenegi.Text = soruIcinSecenekGetir();
                 btnCsecenegi.Text = soruIcinSecenekGetir();
                 btnDsecenegi.Text = donecekSoru.dogruCevap;
+                //dogrusecenek 4 e eşitse doğru cevap E seçeneğindedir.//
             }
         }
         public SoruObjesi SoruGetir()
@@ -98,6 +102,7 @@ namespace YazilimSinama
                 Database dbislemleri = new Database();
                 DataTable dt = new DataTable();
                 dt = dbislemleri.VeriTablosuDondur("SELECT dogruCevap FROM tbl_Soru");
+                //dogru cevapların olduğu database kolonundan rastgele cevaplar seçip,seçenekleri doldurduk.//
 
                 int sayi = rnd.Next(0, dt.Rows.Count);
                 kelime = dt.Rows[sayi][0].ToString();
@@ -112,7 +117,7 @@ namespace YazilimSinama
 
         }
 
-        private void timersure_Tick(object sender, EventArgs e)
+        public void timersure_Tick(object sender, EventArgs e)
         {
             int sure = int.Parse(lblSayac.Text);
             sure--;
@@ -122,14 +127,12 @@ namespace YazilimSinama
                 timersure.Stop();
                 MessageBox.Show("Bu soru için ayrılan süre doldu!");
                 YeniSoru();
-                lblSayac.Text = Convert.ToString(5);
+                lblSayac.Text = Convert.ToString(60);
                 timersure.Start();
             }
 
         }
-
         
-
         private void btnSinavaBasla_Click(object sender, EventArgs e)
         {
             YeniSoru();
@@ -153,14 +156,19 @@ namespace YazilimSinama
             Database dbislemleri = new Database();
             if (buton.Text == donecekSoru.dogruCevap)
             {
+                //işaretlenen butonun texti doğru cevaba eşit mi diye kontrol ettik./
                 dbislemleri.sorguCalistir("UPDATE tbl_Soru set dogruSayisi = (dogruSayisi + 1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
+                //dogru cevaba eşitse dogru sayısını 1 arttırdık ve bugünün tarihini aldık.//
+               
                 if (donecekSoru.kacinciOgrenme == 1)
                 {
                     dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = -2, ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
+                    // kacıncıogrenmesi 1 ise -2 olarak güncelleyip,güncel tarihi aldık.//
                 }
                 else
                 {
                     dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = (kacinciOgrenme + 1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
+                    // -2 dışındakiler için kacıncıogrenmelerini bir arttırarak güncelledik ve güncel tarihi kaydettik.//
                 }
                 MessageBox.Show("Tebrikler doğru cevap");
                 
@@ -168,8 +176,10 @@ namespace YazilimSinama
             else
             {
                 if (donecekSoru.kacinciOgrenme != 0)
+                    // soruyu eğer yanlış cevapladıysak.//
                 {
                     dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = (kacinciOgrenme - 1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
+                    //kacıncıogrenmelerini 1 azaltır,suanki tarihi alırız.//
                 }
                 MessageBox.Show("Maalesef yanlış cevap");
                 //kullanıcı soruyu yanlış cevapladı.

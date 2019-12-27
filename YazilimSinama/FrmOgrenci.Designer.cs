@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cubukGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çIKIŞYAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tblOgrenciBilgiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,7 +63,7 @@
             // menuStripOgrenci
             // 
             this.menuStripOgrenci.BackColor = System.Drawing.Color.LightGreen;
-            this.menuStripOgrenci.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menuStripOgrenci.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuStripOgrenci.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profilimToolStripMenuItem,
             this.sinavaBaslaToolStripMenuItem,
@@ -71,7 +71,7 @@
             this.cikisToolStripMenuItem});
             this.menuStripOgrenci.Location = new System.Drawing.Point(20, 60);
             this.menuStripOgrenci.Name = "menuStripOgrenci";
-            this.menuStripOgrenci.Size = new System.Drawing.Size(890, 29);
+            this.menuStripOgrenci.Size = new System.Drawing.Size(745, 29);
             this.menuStripOgrenci.TabIndex = 0;
             this.menuStripOgrenci.Text = "menuStrip1";
             this.menuStripOgrenci.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStripOgrenci_ItemClicked);
@@ -84,6 +84,15 @@
             this.profilimToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
             this.profilimToolStripMenuItem.Text = "PROFİLİM";
             this.profilimToolStripMenuItem.Click += new System.EventHandler(this.profilimToolStripMenuItem_Click);
+            // 
+            // sinavaBaslaToolStripMenuItem
+            // 
+            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sinavaBaslaToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exam;
+            this.sinavaBaslaToolStripMenuItem.Name = "sinavaBaslaToolStripMenuItem";
+            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
+            this.sinavaBaslaToolStripMenuItem.Text = "SINAVA BAŞLA";
+            this.sinavaBaslaToolStripMenuItem.Click += new System.EventHandler(this.sINAVABAŞLAToolStripMenuItem_Click);
             // 
             // istatiklerToolStripMenuItem
             // 
@@ -109,15 +118,6 @@
             this.cubukGrafikToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.cubukGrafikToolStripMenuItem.Text = "ÇUBUK GRAFİĞİ";
             this.cubukGrafikToolStripMenuItem.Click += new System.EventHandler(this.çUBUKGRAFİĞİToolStripMenuItem_Click);
-            // 
-            // sinavaBaslaToolStripMenuItem
-            // 
-            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sinavaBaslaToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exam;
-            this.sinavaBaslaToolStripMenuItem.Name = "sinavaBaslaToolStripMenuItem";
-            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
-            this.sinavaBaslaToolStripMenuItem.Text = "SINAVA BAŞLA";
-            this.sinavaBaslaToolStripMenuItem.Click += new System.EventHandler(this.sINAVABAŞLAToolStripMenuItem_Click);
             // 
             // cikisToolStripMenuItem
             // 
@@ -146,8 +146,8 @@
             // ogrenciIDDataGridViewTextBoxColumn
             // 
             this.ogrenciIDDataGridViewTextBoxColumn.DataPropertyName = "ogrenciID";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.ogrenciIDDataGridViewTextBoxColumn.HeaderText = "ogrenciID";
             this.ogrenciIDDataGridViewTextBoxColumn.Name = "ogrenciIDDataGridViewTextBoxColumn";
             this.ogrenciIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -199,12 +199,12 @@
             this.columnHeaderCinsiyet,
             this.columnHeaderSinavTarihi,
             this.columnHeaderDogumTarihi});
-            this.listViewProfilim.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listViewProfilim.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listViewProfilim.HideSelection = false;
             this.listViewProfilim.HoverSelection = true;
-            this.listViewProfilim.Location = new System.Drawing.Point(186, 193);
+            this.listViewProfilim.Location = new System.Drawing.Point(135, 203);
             this.listViewProfilim.Name = "listViewProfilim";
-            this.listViewProfilim.Size = new System.Drawing.Size(724, 204);
+            this.listViewProfilim.Size = new System.Drawing.Size(640, 197);
             this.listViewProfilim.TabIndex = 1;
             this.listViewProfilim.UseCompatibleStateImageBehavior = false;
             this.listViewProfilim.View = System.Windows.Forms.View.Details;
@@ -212,13 +212,13 @@
             // 
             // columnHeaderAd
             // 
-            this.columnHeaderAd.Text = "Öğrenci Ad";
-            this.columnHeaderAd.Width = 115;
+            this.columnHeaderAd.Text = " Ad";
+            this.columnHeaderAd.Width = 58;
             // 
             // columnHeaderSoyad
             // 
-            this.columnHeaderSoyad.Text = "Öğrenci Soyad";
-            this.columnHeaderSoyad.Width = 139;
+            this.columnHeaderSoyad.Text = " Soyad";
+            this.columnHeaderSoyad.Width = 89;
             // 
             // columnHeaderOkul
             // 
@@ -243,9 +243,9 @@
             // pictureBoxProfilim
             // 
             this.pictureBoxProfilim.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfilim.Image")));
-            this.pictureBoxProfilim.Location = new System.Drawing.Point(20, 193);
+            this.pictureBoxProfilim.Location = new System.Drawing.Point(6, 203);
             this.pictureBoxProfilim.Name = "pictureBoxProfilim";
-            this.pictureBoxProfilim.Size = new System.Drawing.Size(160, 204);
+            this.pictureBoxProfilim.Size = new System.Drawing.Size(123, 197);
             this.pictureBoxProfilim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfilim.TabIndex = 2;
             this.pictureBoxProfilim.TabStop = false;
@@ -255,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 516);
+            this.ClientSize = new System.Drawing.Size(785, 467);
             this.Controls.Add(this.pictureBoxProfilim);
             this.Controls.Add(this.listViewProfilim);
             this.Controls.Add(this.menuStripOgrenci);

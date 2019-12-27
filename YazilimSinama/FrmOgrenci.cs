@@ -21,10 +21,13 @@ namespace YazilimSinama
         private void profiligoster()
         {
             dbislemleri.baglanti.Open();
-            SqlCommand komut = new SqlCommand("SELECT * FROM tbl_OgrenciBilgi", dbislemleri.baglanti);
-            SqlDataReader oku = komut.ExecuteReader();
+            SqlCommand ogrencikomut = new SqlCommand("SELECT * FROM tbl_OgrenciBilgi", dbislemleri.baglanti);
+            //ogrenci bilgi tablomuzdaki tüm kayıtları seçtik.//
+            SqlDataReader oku = ogrencikomut.ExecuteReader();
+            //data reader ile komutumuzu okuduk.//
             while (oku.Read())
             {
+                //okuma işlemimiz devam ettiği sürece kayıtlarımızı kolon kolon listview'a eklettik.//
                 ListViewItem ekle = new ListViewItem();
                 ekle.Text = oku["ogrenciAd"].ToString();
                 ekle.SubItems.Add(oku["ogrenciSoyad"].ToString());
@@ -35,6 +38,7 @@ namespace YazilimSinama
                 listViewProfilim.Items.Add(ekle);
             }
             dbislemleri.baglanti.Close();
+            // bağlantımızı kapattık.//
         }
         
 
@@ -42,6 +46,7 @@ namespace YazilimSinama
         {
             listViewProfilim.Visible = false;
             pictureBoxProfilim.Visible = false;
+            //form yğklenir yüklenmez listview'ın gelmesinin önüne geçtik.//
 
         }
 
@@ -60,6 +65,7 @@ namespace YazilimSinama
             FrmBasariGrafigi barGrafigineGecis = new FrmBasariGrafigi();
             barGrafigineGecis.Show();
             this.Hide();
+            // menustrip'e tıklandığında bar grafiğinin olduğu forma gitmesini sağladık.//
         }
 
         private void çUBUKGRAFİĞİToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +73,7 @@ namespace YazilimSinama
             FrmCubukGrafigi cubukGrafigineGecis = new FrmCubukGrafigi();
             cubukGrafigineGecis.Show();
             this.Hide();
+            // menustrip'e tıklandığında çubuk grafiğinin olduğu forma gitmesini sağladık.//
         }
 
         private void sINAVABAŞLAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,7 +81,7 @@ namespace YazilimSinama
             FrmSinav sinavol = new FrmSinav();
             sinavol.Show();
             this.Hide();
-            
+            // menustrip'e tıklandığında sınavın olduğu forma gitmesini sağladık.//
 
         }
 
@@ -88,6 +95,7 @@ namespace YazilimSinama
            listViewProfilim.Visible = true;
            pictureBoxProfilim.Visible = true;
            profiligoster();
+            //tanımladığımız fonksiyonun çağrısını yaptık.//
             
         }
 
