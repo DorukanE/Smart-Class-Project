@@ -122,7 +122,7 @@ namespace YazilimSinama
                 timersure.Stop();
                 MessageBox.Show("Bu soru için ayrılan süre doldu!");
                 YeniSoru();
-                lblSayac.Text = Convert.ToString(60);
+                lblSayac.Text = Convert.ToString(5);
                 timersure.Start();
             }
 
