@@ -89,7 +89,6 @@ namespace YazilimSinama
             this.ControlBox = false;
             this.Controls.Add(this.pictureBoxGeri);
             this.Controls.Add(this.chartBasari);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBasariGrafigi";
             this.Text = "Öğrenci Başarı Grafiği";
             this.Load += new System.EventHandler(this.FrmBarGrafigi_Load);

@@ -190,7 +190,6 @@
             this.Controls.Add(this.lblSayac);
             this.DisplayHeader = false;
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSinav";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "Sınav Olma Ekranı";

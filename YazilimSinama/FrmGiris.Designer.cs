@@ -92,9 +92,9 @@
             // btnGiris
             // 
             this.btnGiris.Highlight = true;
-            this.btnGiris.Location = new System.Drawing.Point(216, 357);
+            this.btnGiris.Location = new System.Drawing.Point(216, 345);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(84, 28);
+            this.btnGiris.Size = new System.Drawing.Size(114, 43);
             this.btnGiris.TabIndex = 10;
             this.btnGiris.Text = "GİRİS";
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -140,9 +140,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(510, 357);
+            this.pictureBox1.Location = new System.Drawing.Point(448, 345);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -165,7 +165,6 @@
             this.Controls.Add(this.rdnBtnOgrenci);
             this.Controls.Add(this.pictureBoxOgretmen);
             this.Controls.Add(this.pictureBoxOgrenci);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Giriş Ekranı";

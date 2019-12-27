@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cubukGrafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çIKIŞYAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tblOgrenciBilgiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -85,15 +85,6 @@
             this.profilimToolStripMenuItem.Text = "PROFİLİM";
             this.profilimToolStripMenuItem.Click += new System.EventHandler(this.profilimToolStripMenuItem_Click);
             // 
-            // sinavaBaslaToolStripMenuItem
-            // 
-            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sinavaBaslaToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exam;
-            this.sinavaBaslaToolStripMenuItem.Name = "sinavaBaslaToolStripMenuItem";
-            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
-            this.sinavaBaslaToolStripMenuItem.Text = "SINAVA BAŞLA";
-            this.sinavaBaslaToolStripMenuItem.Click += new System.EventHandler(this.sINAVABAŞLAToolStripMenuItem_Click);
-            // 
             // istatiklerToolStripMenuItem
             // 
             this.istatiklerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -118,6 +109,15 @@
             this.cubukGrafikToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.cubukGrafikToolStripMenuItem.Text = "ÇUBUK GRAFİĞİ";
             this.cubukGrafikToolStripMenuItem.Click += new System.EventHandler(this.çUBUKGRAFİĞİToolStripMenuItem_Click);
+            // 
+            // sinavaBaslaToolStripMenuItem
+            // 
+            this.sinavaBaslaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sinavaBaslaToolStripMenuItem.Image = global::YazilimSinama.Properties.Resources.exam;
+            this.sinavaBaslaToolStripMenuItem.Name = "sinavaBaslaToolStripMenuItem";
+            this.sinavaBaslaToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
+            this.sinavaBaslaToolStripMenuItem.Text = "SINAVA BAŞLA";
+            this.sinavaBaslaToolStripMenuItem.Click += new System.EventHandler(this.sINAVABAŞLAToolStripMenuItem_Click);
             // 
             // cikisToolStripMenuItem
             // 
@@ -260,7 +260,6 @@
             this.Controls.Add(this.listViewProfilim);
             this.Controls.Add(this.menuStripOgrenci);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripOgrenci;
             this.Name = "FrmOgrenci";
             this.Text = "Öğrenci Girişi";
