@@ -29,5 +29,12 @@ namespace YazilimSinama
             }
             dbIslem.baglanti.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmOgrenci ogrenciyedon = new FrmOgrenci();
+            ogrenciyedon.Show();
+            this.Hide();
+        }
     }
 }
