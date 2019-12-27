@@ -31,12 +31,15 @@ namespace YazilimSinama
         private void InitializeComponent()
         {
             DevExpress.XtraCharts.XYDiagram3D xyDiagram3D1 = new DevExpress.XtraCharts.XYDiagram3D();
-            Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBar3DSeriesView sideBySideBar3DSeriesView1 = new DevExpress.XtraCharts.SideBySideBar3DSeriesView();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBasariGrafigi));
             this.chartBasari = new DevExpress.XtraCharts.ChartControl();
             this.pictureBoxGeri = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartBasari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +76,9 @@ namespace YazilimSinama
             // pictureBoxGeri
             // 
             this.pictureBoxGeri.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGeri.Image")));
-            this.pictureBoxGeri.Location = new System.Drawing.Point(498, 13);
+            this.pictureBoxGeri.Location = new System.Drawing.Point(498, 25);
             this.pictureBoxGeri.Name = "pictureBoxGeri";
-            this.pictureBoxGeri.Size = new System.Drawing.Size(60, 43);
+            this.pictureBoxGeri.Size = new System.Drawing.Size(41, 31);
             this.pictureBoxGeri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxGeri.TabIndex = 1;
             this.pictureBoxGeri.TabStop = false;
@@ -86,12 +89,14 @@ namespace YazilimSinama
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 425);
-            this.ControlBox = false;
             this.Controls.Add(this.pictureBoxGeri);
             this.Controls.Add(this.chartBasari);
             this.Name = "FrmBasariGrafigi";
             this.Text = "Öğrenci Başarı Grafiği";
             this.Load += new System.EventHandler(this.FrmBarGrafigi_Load);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBasari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).EndInit();
             this.ResumeLayout(false);
