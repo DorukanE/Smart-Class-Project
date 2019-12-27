@@ -165,6 +165,7 @@
             this.Controls.Add(this.rdnBtnOgrenci);
             this.Controls.Add(this.pictureBoxOgretmen);
             this.Controls.Add(this.pictureBoxOgrenci);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Giriş Ekranı";

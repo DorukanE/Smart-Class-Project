@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgretmen));
             this.lblSoru = new System.Windows.Forms.Label();
             this.lblKonu = new System.Windows.Forms.Label();
             this.lblDogruCevap = new System.Windows.Forms.Label();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.lblDogruCevap);
             this.Controls.Add(this.lblKonu);
             this.Controls.Add(this.lblSoru);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmOgretmen";
             this.Text = "Öğretmen Girişi";
             this.Load += new System.EventHandler(this.FrmOgretmen_Load);
