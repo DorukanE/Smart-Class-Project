@@ -8,16 +8,14 @@ using System.Windows.Forms;
 
 namespace YazilimSinama
 {
-    class OgrenciGiris
+    public class OgrenciGiris
     {
             Database db = new Database();
             public string kullaniciAdi_tut { get; set; }
             public string sifre_tut { get; set; }
 
             public string girisDurumu { get; set; }
-
-
-            public void girisYap(string kullaniciAdi, string sifre, Form frm1)
+        public void girisYap(string kullaniciAdi, string sifre)
             {
                 if (db.baglanti.State == System.Data.ConnectionState.Open)
                 {
@@ -32,11 +30,15 @@ namespace YazilimSinama
                     SqlDataReader kulAdi_Oku = giriskomutu.ExecuteReader();
                     if (kulAdi_Oku.Read())
                     {
+                    kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
                     MessageBox.Show("Giriş başarılı");
                     FrmOgrenci frmOgrenci = new FrmOgrenci();
-                    frm1.Hide();
                     frmOgrenci.Show();
-                    //kullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
+                    
+                    /*FrmOgrenci frmOgrenci = new FrmOgrenci();
+                    frmYeni.Hide();
+                    frmOgrenci.Show();*/
+
                     /*SqlCommand giriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgrenciGiris WHERE sifre=@sifre ", db.baglanti);
                     giriskomutupw.Parameters.AddWithValue("@sifre", sifre);
                     SqlDataReader giriskomutupw_oku = giriskomutupw.ExecuteReader();
@@ -53,7 +55,7 @@ namespace YazilimSinama
                         Application.Exit();
 
                     }*/
-                }
+                    }
                     else
                     {
                         MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz.");

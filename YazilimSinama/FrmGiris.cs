@@ -29,7 +29,7 @@ namespace YazilimSinama
                 }*/
                 if (rdnBtnOgrenci.Checked == true)
                 {
-                ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text, this);
+                ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text);
                 txtKullanici.Text = "";
                 txtSifre.Text = "";
                 /*FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
@@ -39,9 +39,11 @@ namespace YazilimSinama
                 if (rdnBtnOgretmen.Checked == true)
                 {
                     ogretmengirisyapalim.OgretmengirisYap(txtKullanici.Text, txtSifre.Text);
-                    FrmOgretmen ogretmenegecis = new FrmOgretmen();
+                    txtKullanici.Text = "";
+                    txtSifre.Text = "";
+                    /*FrmOgretmen ogretmenegecis = new FrmOgretmen();
                     ogretmenegecis.Show();
-                    this.Hide();
+                    this.Hide();*/
                 }
 
             }
@@ -65,7 +67,8 @@ namespace YazilimSinama
                 e.Cancel = true;
                 return;
             }
-            Application.Exit();
+               Application.Exit();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

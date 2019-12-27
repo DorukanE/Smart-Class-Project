@@ -26,12 +26,16 @@ namespace YazilimSinama
             try
             {
                 db.baglanti.Open();
-                SqlCommand Ogretmengiriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgretmenGiris WHERE kullaniciAdi=@kulAdi", db.baglanti);
+                SqlCommand Ogretmengiriskomutu = new SqlCommand("SELECT kullaniciAdi FROM tbl_OgretmenGiris WHERE kullaniciAdi=@kulAdi AND sifre=@sifre", db.baglanti);
                 Ogretmengiriskomutu.Parameters.AddWithValue("@kulAdi", kullaniciAdi);
+                Ogretmengiriskomutu.Parameters.AddWithValue("@sifre", sifre);
                 SqlDataReader kulAdi_Oku = Ogretmengiriskomutu.ExecuteReader();
                 if (kulAdi_Oku.Read())
                 {
-                    OgretmenkullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
+                    MessageBox.Show("Giriş başarılı");
+                    FrmOgretmen frmOgretmen = new FrmOgretmen();
+                    frmOgretmen.Show();
+                    /*OgretmenkullaniciAdi_tut = kulAdi_Oku["kullaniciAdi"].ToString();
                     SqlCommand Ogretmengiriskomutupw = new SqlCommand("SELECT sifre FROM tbl_OgretmenGiris WHERE sifre=@sifre ", db.baglanti);
                     Ogretmengiriskomutupw.Parameters.AddWithValue("@sifre", sifre);
                     SqlDataReader Ogretmengiriskomutupw_oku = Ogretmengiriskomutupw.ExecuteReader();
@@ -46,12 +50,12 @@ namespace YazilimSinama
                         MessageBox.Show("Kullanici Adini Yanlis Girdiniz!");
                         Application.Exit();
 
-                    }
+                    }*/
                 }
                 else
                 {
-                    MessageBox.Show("Kullanici Adini Yanlis Girdiniz!!");
-                    Application.Exit();
+                    MessageBox.Show("Lütfen bilgilerinizi kontrol ediniz.");
+                    //Application.Exit();
                 }
             }
             catch { }
