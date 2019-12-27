@@ -20,5 +20,17 @@ namespace YazilimSinamaTestler
         {
             ogrenciGirisTest("dorukan", "1234", "dorukan");
         }
+
+        [TestMethod]
+        void ogretmenSoruEklemeTest()
+        {
+
+        }
+
+        [TestMethod]
+        public void ogretmenSoruEkle()
+        {
+            ogretmenSoruEklemeTest();
+        }
     }
 }

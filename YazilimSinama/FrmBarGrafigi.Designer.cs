@@ -93,6 +93,7 @@ namespace YazilimSinama
             this.Controls.Add(this.chartBasari);
             this.Name = "FrmBasariGrafigi";
             this.Text = "Öğrenci Başarı Grafiği";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBarGrafigi_Load);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).EndInit();
