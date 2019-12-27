@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSoruMetni = new MetroFramework.Controls.MetroLabel();
             this.btnSinaviBitir = new MetroFramework.Controls.MetroButton();
+            this.btnIstatistigiGoster = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +78,7 @@
             // 
             // btnSinavaBasla
             // 
-            this.btnSinavaBasla.Location = new System.Drawing.Point(285, 372);
+            this.btnSinavaBasla.Location = new System.Drawing.Point(240, 372);
             this.btnSinavaBasla.Name = "btnSinavaBasla";
             this.btnSinavaBasla.Size = new System.Drawing.Size(111, 55);
             this.btnSinavaBasla.TabIndex = 25;
@@ -133,9 +134,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(680, 372);
+            this.pictureBox1.Location = new System.Drawing.Point(711, 393);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 68);
+            this.pictureBox1.Size = new System.Drawing.Size(65, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -153,12 +154,21 @@
             // 
             // btnSinaviBitir
             // 
-            this.btnSinaviBitir.Location = new System.Drawing.Point(489, 372);
+            this.btnSinaviBitir.Location = new System.Drawing.Point(382, 372);
             this.btnSinaviBitir.Name = "btnSinaviBitir";
             this.btnSinaviBitir.Size = new System.Drawing.Size(111, 55);
             this.btnSinaviBitir.TabIndex = 34;
             this.btnSinaviBitir.Text = "Sınavı Bitir";
             this.btnSinaviBitir.Click += new System.EventHandler(this.btnSinaviBitir_Click);
+            // 
+            // btnIstatistigiGoster
+            // 
+            this.btnIstatistigiGoster.Location = new System.Drawing.Point(526, 372);
+            this.btnIstatistigiGoster.Name = "btnIstatistigiGoster";
+            this.btnIstatistigiGoster.Size = new System.Drawing.Size(111, 55);
+            this.btnIstatistigiGoster.TabIndex = 35;
+            this.btnIstatistigiGoster.Text = "İstatistiği Göster";
+            this.btnIstatistigiGoster.Click += new System.EventHandler(this.btnIstatistigiGoster_Click);
             // 
             // FrmSinav
             // 
@@ -166,6 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(785, 467);
+            this.Controls.Add(this.btnIstatistigiGoster);
             this.Controls.Add(this.btnSinaviBitir);
             this.Controls.Add(this.lblSoruMetni);
             this.Controls.Add(this.pictureBox1);
@@ -204,5 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblSoruMetni;
         private MetroFramework.Controls.MetroButton btnSinaviBitir;
+        private MetroFramework.Controls.MetroButton btnIstatistigiGoster;
     }
 }

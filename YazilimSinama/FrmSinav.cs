@@ -225,5 +225,13 @@ namespace YazilimSinama
         {
 
         }
+
+        private void btnIstatistigiGoster_Click(object sender, EventArgs e)
+        {
+            FrmBasariGrafigi istatistigegecis = new FrmBasariGrafigi();
+            istatistigegecis.Show();
+            this.Hide();
+
+        }
     }
 }
