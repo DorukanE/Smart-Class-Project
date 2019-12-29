@@ -33,19 +33,18 @@
             this.lblSayac = new MetroFramework.Controls.MetroLabel();
             this.timersure = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxClock = new System.Windows.Forms.PictureBox();
-            this.btnSinavaBasla = new MetroFramework.Controls.MetroButton();
             this.btnAsecenegi = new MetroFramework.Controls.MetroButton();
             this.btnBsecenegi = new MetroFramework.Controls.MetroButton();
             this.btnCsecenegi = new MetroFramework.Controls.MetroButton();
             this.btnDsecenegi = new MetroFramework.Controls.MetroButton();
             this.SürePictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGeri = new System.Windows.Forms.PictureBox();
             this.lblSoruMetni = new MetroFramework.Controls.MetroLabel();
             this.btnSinaviBitir = new MetroFramework.Controls.MetroButton();
             this.btnIstatistigiGoster = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSayac
@@ -55,9 +54,8 @@
             this.lblSayac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblSayac.Location = new System.Drawing.Point(721, 30);
             this.lblSayac.Name = "lblSayac";
-            this.lblSayac.Size = new System.Drawing.Size(32, 25);
+            this.lblSayac.Size = new System.Drawing.Size(0, 0);
             this.lblSayac.TabIndex = 11;
-            this.lblSayac.Text = "60";
             // 
             // timersure
             // 
@@ -74,15 +72,7 @@
             this.pictureBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxClock.TabIndex = 12;
             this.pictureBoxClock.TabStop = false;
-            // 
-            // btnSinavaBasla
-            // 
-            this.btnSinavaBasla.Location = new System.Drawing.Point(240, 372);
-            this.btnSinavaBasla.Name = "btnSinavaBasla";
-            this.btnSinavaBasla.Size = new System.Drawing.Size(111, 55);
-            this.btnSinavaBasla.TabIndex = 25;
-            this.btnSinavaBasla.Text = "Sınava Başla";
-            this.btnSinavaBasla.Click += new System.EventHandler(this.btnSinavaBasla_Click);
+            this.pictureBoxClock.Click += new System.EventHandler(this.pictureBoxClock_Click);
             // 
             // btnAsecenegi
             // 
@@ -123,23 +113,23 @@
             // SürePictureBox
             // 
             this.SürePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("SürePictureBox.Image")));
-            this.SürePictureBox.Location = new System.Drawing.Point(44, 190);
+            this.SürePictureBox.Location = new System.Drawing.Point(42, 171);
             this.SürePictureBox.Name = "SürePictureBox";
             this.SürePictureBox.Size = new System.Drawing.Size(177, 199);
             this.SürePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SürePictureBox.TabIndex = 30;
             this.SürePictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBoxGeri
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(711, 393);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBoxGeri.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGeri.Image")));
+            this.pictureBoxGeri.Location = new System.Drawing.Point(711, 393);
+            this.pictureBoxGeri.Name = "pictureBoxGeri";
+            this.pictureBoxGeri.Size = new System.Drawing.Size(65, 51);
+            this.pictureBoxGeri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGeri.TabIndex = 32;
+            this.pictureBoxGeri.TabStop = false;
+            this.pictureBoxGeri.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblSoruMetni
             // 
@@ -153,20 +143,22 @@
             // 
             // btnSinaviBitir
             // 
-            this.btnSinaviBitir.Location = new System.Drawing.Point(382, 372);
+            this.btnSinaviBitir.Highlight = true;
+            this.btnSinaviBitir.Location = new System.Drawing.Point(303, 393);
             this.btnSinaviBitir.Name = "btnSinaviBitir";
-            this.btnSinaviBitir.Size = new System.Drawing.Size(111, 55);
+            this.btnSinaviBitir.Size = new System.Drawing.Size(106, 64);
             this.btnSinaviBitir.TabIndex = 34;
             this.btnSinaviBitir.Text = "Sınavı Bitir";
             this.btnSinaviBitir.Click += new System.EventHandler(this.btnSinaviBitir_Click);
             // 
             // btnIstatistigiGoster
             // 
-            this.btnIstatistigiGoster.Location = new System.Drawing.Point(526, 372);
+            this.btnIstatistigiGoster.Highlight = true;
+            this.btnIstatistigiGoster.Location = new System.Drawing.Point(465, 393);
             this.btnIstatistigiGoster.Name = "btnIstatistigiGoster";
-            this.btnIstatistigiGoster.Size = new System.Drawing.Size(111, 55);
+            this.btnIstatistigiGoster.Size = new System.Drawing.Size(94, 64);
             this.btnIstatistigiGoster.TabIndex = 35;
-            this.btnIstatistigiGoster.Text = "İstatistiği Göster";
+            this.btnIstatistigiGoster.Text = "İstatistiği\r\n Göster";
             this.btnIstatistigiGoster.Click += new System.EventHandler(this.btnIstatistigiGoster_Click);
             // 
             // FrmSinav
@@ -178,13 +170,12 @@
             this.Controls.Add(this.btnIstatistigiGoster);
             this.Controls.Add(this.btnSinaviBitir);
             this.Controls.Add(this.lblSoruMetni);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxGeri);
             this.Controls.Add(this.SürePictureBox);
             this.Controls.Add(this.btnDsecenegi);
             this.Controls.Add(this.btnCsecenegi);
             this.Controls.Add(this.btnBsecenegi);
             this.Controls.Add(this.btnAsecenegi);
-            this.Controls.Add(this.btnSinavaBasla);
             this.Controls.Add(this.pictureBoxClock);
             this.Controls.Add(this.lblSayac);
             this.DisplayHeader = false;
@@ -195,7 +186,7 @@
             this.Load += new System.EventHandler(this.FrmSinav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SürePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,13 +196,12 @@
         private MetroFramework.Controls.MetroLabel lblSayac;
         private System.Windows.Forms.Timer timersure;
         private System.Windows.Forms.PictureBox pictureBoxClock;
-        private MetroFramework.Controls.MetroButton btnSinavaBasla;
         private MetroFramework.Controls.MetroButton btnAsecenegi;
         private MetroFramework.Controls.MetroButton btnBsecenegi;
         private MetroFramework.Controls.MetroButton btnCsecenegi;
         private MetroFramework.Controls.MetroButton btnDsecenegi;
         private System.Windows.Forms.PictureBox SürePictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxGeri;
         private MetroFramework.Controls.MetroLabel lblSoruMetni;
         private MetroFramework.Controls.MetroButton btnSinaviBitir;
         private MetroFramework.Controls.MetroButton btnIstatistigiGoster;

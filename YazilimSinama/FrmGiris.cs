@@ -54,11 +54,6 @@ namespace YazilimSinama
             txtKullanici.SelectionStart = txtKullanici.Text.Length;
         }
 
-        private void FrmGiris_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmGiris_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

@@ -38,11 +38,11 @@
             this.lblDogruCevap = new System.Windows.Forms.Label();
             this.lblKonu = new System.Windows.Forms.Label();
             this.lblSoru = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOgretmen = new System.Windows.Forms.PictureBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             this.groupBoxOgretmen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxExit
@@ -68,14 +68,14 @@
             this.groupBoxOgretmen.Controls.Add(this.lblSoru);
             this.groupBoxOgretmen.Location = new System.Drawing.Point(336, 130);
             this.groupBoxOgretmen.Name = "groupBoxOgretmen";
-            this.groupBoxOgretmen.Size = new System.Drawing.Size(290, 273);
+            this.groupBoxOgretmen.Size = new System.Drawing.Size(359, 273);
             this.groupBoxOgretmen.TabIndex = 9;
             this.groupBoxOgretmen.TabStop = false;
             // 
             // btnSoruEkle
             // 
             this.btnSoruEkle.Highlight = true;
-            this.btnSoruEkle.Location = new System.Drawing.Point(92, 186);
+            this.btnSoruEkle.Location = new System.Drawing.Point(125, 210);
             this.btnSoruEkle.Name = "btnSoruEkle";
             this.btnSoruEkle.Size = new System.Drawing.Size(91, 45);
             this.btnSoruEkle.TabIndex = 13;
@@ -84,30 +84,31 @@
             // 
             // txtDogruCevap
             // 
-            this.txtDogruCevap.Location = new System.Drawing.Point(169, 136);
+            this.txtDogruCevap.Location = new System.Drawing.Point(157, 172);
             this.txtDogruCevap.Name = "txtDogruCevap";
-            this.txtDogruCevap.Size = new System.Drawing.Size(75, 23);
+            this.txtDogruCevap.Size = new System.Drawing.Size(163, 23);
             this.txtDogruCevap.TabIndex = 12;
             // 
             // txtSoru
             // 
-            this.txtSoru.Location = new System.Drawing.Point(169, 85);
+            this.txtSoru.Location = new System.Drawing.Point(153, 85);
+            this.txtSoru.Multiline = true;
             this.txtSoru.Name = "txtSoru";
-            this.txtSoru.Size = new System.Drawing.Size(75, 23);
+            this.txtSoru.Size = new System.Drawing.Size(163, 65);
             this.txtSoru.TabIndex = 11;
             // 
             // txtKonu
             // 
-            this.txtKonu.Location = new System.Drawing.Point(169, 43);
+            this.txtKonu.Location = new System.Drawing.Point(153, 29);
             this.txtKonu.Name = "txtKonu";
-            this.txtKonu.Size = new System.Drawing.Size(75, 23);
+            this.txtKonu.Size = new System.Drawing.Size(167, 23);
             this.txtKonu.TabIndex = 10;
             // 
             // lblDogruCevap
             // 
             this.lblDogruCevap.AutoSize = true;
             this.lblDogruCevap.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDogruCevap.Location = new System.Drawing.Point(27, 136);
+            this.lblDogruCevap.Location = new System.Drawing.Point(11, 178);
             this.lblDogruCevap.Name = "lblDogruCevap";
             this.lblDogruCevap.Size = new System.Drawing.Size(136, 17);
             this.lblDogruCevap.TabIndex = 9;
@@ -117,7 +118,7 @@
             // 
             this.lblKonu.AutoSize = true;
             this.lblKonu.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKonu.Location = new System.Drawing.Point(27, 43);
+            this.lblKonu.Location = new System.Drawing.Point(11, 29);
             this.lblKonu.Name = "lblKonu";
             this.lblKonu.Size = new System.Drawing.Size(87, 17);
             this.lblKonu.TabIndex = 8;
@@ -127,21 +128,21 @@
             // 
             this.lblSoru.AutoSize = true;
             this.lblSoru.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoru.Location = new System.Drawing.Point(27, 85);
+            this.lblSoru.Location = new System.Drawing.Point(15, 85);
             this.lblSoru.Name = "lblSoru";
             this.lblSoru.Size = new System.Drawing.Size(83, 17);
             this.lblSoru.TabIndex = 7;
             this.lblSoru.Text = "Soru Giriniz:";
             // 
-            // pictureBox1
+            // pictureBoxOgretmen
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(70, 130);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 273);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxOgretmen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOgretmen.Image")));
+            this.pictureBoxOgretmen.Location = new System.Drawing.Point(70, 130);
+            this.pictureBoxOgretmen.Name = "pictureBoxOgretmen";
+            this.pictureBoxOgretmen.Size = new System.Drawing.Size(246, 273);
+            this.pictureBoxOgretmen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOgretmen.TabIndex = 10;
+            this.pictureBoxOgretmen.TabStop = false;
             // 
             // lblBaslik
             // 
@@ -159,7 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblBaslik);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxOgretmen);
             this.Controls.Add(this.groupBoxOgretmen);
             this.Controls.Add(this.pictureBoxExit);
             this.Name = "FrmOgretmen";
@@ -167,7 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             this.groupBoxOgretmen.ResumeLayout(false);
             this.groupBoxOgretmen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,7 +183,7 @@
         private System.Windows.Forms.Label lblDogruCevap;
         private System.Windows.Forms.Label lblKonu;
         private System.Windows.Forms.Label lblSoru;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxOgretmen;
         private System.Windows.Forms.Label lblBaslik;
     }
 }

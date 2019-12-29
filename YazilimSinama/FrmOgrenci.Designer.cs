@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenci));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripOgrenci = new System.Windows.Forms.MenuStrip();
             this.profilimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sinavaBaslaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,8 +146,8 @@
             // ogrenciIDDataGridViewTextBoxColumn
             // 
             this.ogrenciIDDataGridViewTextBoxColumn.DataPropertyName = "ogrenciID";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            this.ogrenciIDDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.ogrenciIDDataGridViewTextBoxColumn.HeaderText = "ogrenciID";
             this.ogrenciIDDataGridViewTextBoxColumn.Name = "ogrenciIDDataGridViewTextBoxColumn";
             this.ogrenciIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -213,7 +213,7 @@
             // columnHeaderAd
             // 
             this.columnHeaderAd.Text = " Ad";
-            this.columnHeaderAd.Width = 58;
+            this.columnHeaderAd.Width = 97;
             // 
             // columnHeaderSoyad
             // 
@@ -249,7 +249,6 @@
             this.pictureBoxProfilim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfilim.TabIndex = 2;
             this.pictureBoxProfilim.TabStop = false;
-            this.pictureBoxProfilim.Click += new System.EventHandler(this.pictureBoxProfilim_Click);
             // 
             // FrmOgrenci
             // 

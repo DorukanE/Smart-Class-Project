@@ -104,17 +104,12 @@ namespace YazilimSinama
             
         }
 
-        private void listViewProfilim_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void menuStripOgrenci_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
-        private void pictureBoxProfilim_Click(object sender, EventArgs e)
+        private void listViewProfilim_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -12,14 +12,15 @@ namespace YazilimSinama
         {
             InitializeComponent();
         }
-
+        int sure = 61;
         Database dbislemleri = new Database();
         SoruObjesi donecekSoru = new SoruObjesi();
 
 
         private void FrmSinav_Load(object sender, EventArgs e)
         {
-           timersure.Start();
+            timersure.Start();
+            YeniSoru();
             
         }
 
@@ -112,31 +113,29 @@ namespace YazilimSinama
             return kelime;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
+      
 
         public void timersure_Tick(object sender, EventArgs e)
         {
-            int sure = int.Parse(lblSayac.Text);
             sure--;
             lblSayac.Text = sure.ToString();
+            
             if (sure <= 0)
             {
                 timersure.Stop();
-                MessageBox.Show("Bu soru için ayrılan süre doldu!");
-                YeniSoru();
-                lblSayac.Text = Convert.ToString(60);
+                MessageBox.Show("Bu soru için ayrılan süre doldu,cevabınız yanlış!");
+                dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = (kacinciOgrenme -1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
+                sure = 61;
                 timersure.Start();
+                YeniSoru();
+                
             }
 
         }
         
         private void btnSinavaBasla_Click(object sender, EventArgs e)
         {
-            YeniSoru();
-            btnSinavaBasla.Visible = false;
+           
 
         }
 
@@ -150,10 +149,11 @@ namespace YazilimSinama
            
         }
         
-        private void btnDsecenegi_MouseClick(object sender, MouseEventArgs e)
+        public void btnDsecenegi_MouseClick(object sender, MouseEventArgs e)
         {
-            Button buton = sender as Button;
-            Database dbislemleri = new Database();
+             Button buton = sender as Button;
+             Database dbislemleri = new Database();
+           
             if (buton.Text == donecekSoru.dogruCevap)
             {
                 //işaretlenen butonun texti doğru cevaba eşit mi diye kontrol ettik./
@@ -200,7 +200,10 @@ namespace YazilimSinama
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+
         {
+            sure = 61;
+            timersure.Start();
             YeniSoru();
         }
 
@@ -236,6 +239,11 @@ namespace YazilimSinama
             FrmBasariGrafigi istatistigegecis = new FrmBasariGrafigi();
             istatistigegecis.Show();
             this.Hide();
+
+        }
+
+        private void pictureBoxClock_Click(object sender, EventArgs e)
+        {
 
         }
     }
