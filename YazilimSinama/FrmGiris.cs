@@ -17,6 +17,7 @@ namespace YazilimSinama
         {
             InitializeComponent();
         }
+        //Olan class'lardan nesne yaratılması
         OgrenciGiris ogrencigirisyapalim = new OgrenciGiris();
         OgretmenGiris ogretmengirisyapalim = new OgretmenGiris();
     
@@ -29,6 +30,7 @@ namespace YazilimSinama
                 txtKullanici.Text = "";
                 txtSifre.Text = "";
             }
+                //Hangi tür kullanıcı olcağının seçimi
                 if (rdnBtnOgretmen.Checked == true)
                 {
                     ogretmengirisyapalim.OgretmengirisYap(txtKullanici.Text, txtSifre.Text);
@@ -61,11 +63,6 @@ namespace YazilimSinama
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void rdnBtnOgretmen_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

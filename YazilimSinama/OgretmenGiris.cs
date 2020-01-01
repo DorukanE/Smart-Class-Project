@@ -12,10 +12,11 @@ namespace YazilimSinama
     {
         Database db = new Database();
         public string OgretmenkullaniciAdi_tut { get; set; }
+        //Ogretmenin kullanıcı adının depolanması
         public string Ogretmensifre_tut { get; set; }
-
+        //Öğretmenin şifresinin depolanması
         public string OgretmengirisDurumu { get; set; }
-
+        //Giriş durumunun tutulması
 
         public void OgretmengirisYap(string kullaniciAdi, string sifre)
         {
