@@ -94,9 +94,9 @@ namespace YazilimSinama
 
         public void btnSoruEkle_Click_1(object sender, EventArgs e)
         { 
-            if(txtDogruCevap.Text == "")
+            if(txtDogruCevap.Text == "" || txtSoru.Text == "" || txtKonu.Text == "")
             {
-                MessageBox.Show("Lütfen sorunun doğru cevabını giriniz.");
+                MessageBox.Show("Lütfen soruyla alakalı tüm bilgileri giriniz.");
             }
             else
             {
