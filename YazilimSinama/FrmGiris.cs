@@ -59,5 +59,10 @@ namespace YazilimSinama
         {
             Application.Exit();
         }
+
+        private void rdnBtnOgretmen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

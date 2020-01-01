@@ -34,12 +34,12 @@
             this.pictureBoxOgrenci = new System.Windows.Forms.PictureBox();
             this.pictureBoxCikis = new System.Windows.Forms.PictureBox();
             this.groupBoxgiris = new System.Windows.Forms.GroupBox();
-            this.rdnBtnOgretmen = new MetroFramework.Controls.MetroRadioButton();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullanici = new System.Windows.Forms.TextBox();
             this.lblSifre = new MetroFramework.Controls.MetroLabel();
             this.lblKullaniciAdi = new MetroFramework.Controls.MetroLabel();
             this.rdnBtnOgrenci = new MetroFramework.Controls.MetroRadioButton();
+            this.rdnBtnOgretmen = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgretmen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOgrenci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCikis)).BeginInit();
@@ -90,29 +90,16 @@
             // groupBoxgiris
             // 
             this.groupBoxgiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.groupBoxgiris.Controls.Add(this.rdnBtnOgretmen);
             this.groupBoxgiris.Controls.Add(this.txtSifre);
             this.groupBoxgiris.Controls.Add(this.txtKullanici);
             this.groupBoxgiris.Controls.Add(this.btnGiris);
             this.groupBoxgiris.Controls.Add(this.lblSifre);
             this.groupBoxgiris.Controls.Add(this.lblKullaniciAdi);
-            this.groupBoxgiris.Location = new System.Drawing.Point(76, 217);
+            this.groupBoxgiris.Location = new System.Drawing.Point(79, 238);
             this.groupBoxgiris.Name = "groupBoxgiris";
             this.groupBoxgiris.Size = new System.Drawing.Size(397, 172);
             this.groupBoxgiris.TabIndex = 14;
             this.groupBoxgiris.TabStop = false;
-            // 
-            // rdnBtnOgretmen
-            // 
-            this.rdnBtnOgretmen.AutoSize = true;
-            this.rdnBtnOgretmen.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.rdnBtnOgretmen.Location = new System.Drawing.Point(267, 0);
-            this.rdnBtnOgretmen.Name = "rdnBtnOgretmen";
-            this.rdnBtnOgretmen.Size = new System.Drawing.Size(112, 15);
-            this.rdnBtnOgretmen.TabIndex = 16;
-            this.rdnBtnOgretmen.TabStop = true;
-            this.rdnBtnOgretmen.Text = "Öğretmen Girişi";
-            this.rdnBtnOgretmen.UseVisualStyleBackColor = true;
             // 
             // txtSifre
             // 
@@ -164,6 +151,18 @@
             this.rdnBtnOgrenci.Text = "Öğrenci Girişi";
             this.rdnBtnOgrenci.UseVisualStyleBackColor = true;
             // 
+            // rdnBtnOgretmen
+            // 
+            this.rdnBtnOgretmen.AutoSize = true;
+            this.rdnBtnOgretmen.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.rdnBtnOgretmen.Location = new System.Drawing.Point(337, 217);
+            this.rdnBtnOgretmen.Name = "rdnBtnOgretmen";
+            this.rdnBtnOgretmen.Size = new System.Drawing.Size(112, 15);
+            this.rdnBtnOgretmen.TabIndex = 16;
+            this.rdnBtnOgretmen.TabStop = true;
+            this.rdnBtnOgretmen.Text = "Öğretmen Girişi";
+            this.rdnBtnOgretmen.UseVisualStyleBackColor = true;
+            // 
             // FrmGiris
             // 
             this.AcceptButton = this.btnGiris;
@@ -171,6 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 425);
             this.ControlBox = false;
+            this.Controls.Add(this.rdnBtnOgretmen);
             this.Controls.Add(this.rdnBtnOgrenci);
             this.Controls.Add(this.groupBoxgiris);
             this.Controls.Add(this.pictureBoxCikis);
@@ -198,12 +198,12 @@
         private MetroFramework.Controls.MetroButton btnGiris;
         private System.Windows.Forms.PictureBox pictureBoxCikis;
         private System.Windows.Forms.GroupBox groupBoxgiris;
-        private MetroFramework.Controls.MetroRadioButton rdnBtnOgretmen;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtKullanici;
         private MetroFramework.Controls.MetroLabel lblSifre;
         private MetroFramework.Controls.MetroLabel lblKullaniciAdi;
         private MetroFramework.Controls.MetroRadioButton rdnBtnOgrenci;
+        private MetroFramework.Controls.MetroRadioButton rdnBtnOgretmen;
     }
 }
 
