@@ -112,9 +112,6 @@ namespace YazilimSinama
             } while (kelime == donecekSoru.dogruCevap);
             return kelime;
         }
-
-      
-
         public void timersure_Tick(object sender, EventArgs e)
         {
             sure--;
@@ -132,23 +129,6 @@ namespace YazilimSinama
             }
 
         }
-        
-        private void btnSinavaBasla_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-
-        private void Secenek_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-        private void txtDSecenegi_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-           
-        }
-        
         public void btnDsecenegi_MouseClick(object sender, MouseEventArgs e)
         {
              Button buton = sender as Button;
@@ -193,12 +173,10 @@ namespace YazilimSinama
             public string dogruCevap { get; set; }
             public int kacinciOgrenme { get; set; }
         }
-
         private void btnAsecenegi_Click(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
 
         {
@@ -213,22 +191,18 @@ namespace YazilimSinama
             ogrenciyegecis.Show();
             this.Hide();
         }
-
         private void lblSoruMetni_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnCsecenegi_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnBsecenegi_Click(object sender, EventArgs e)
         {
 
         }
-
         private void btnDsecenegi_Click(object sender, EventArgs e)
         {
 
@@ -241,7 +215,6 @@ namespace YazilimSinama
             this.Hide();
 
         }
-
         private void pictureBoxClock_Click(object sender, EventArgs e)
         {
 

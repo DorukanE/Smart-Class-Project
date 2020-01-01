@@ -46,12 +46,7 @@ namespace YazilimSinama
         {
             listViewProfilim.Visible = false;
             pictureBoxProfilim.Visible = false;
-            //form yğklenir yüklenmez listview'ın gelmesinin önüne geçtik.//
-
-        }
-
-        private void kULLANICIBİLGİLERİMToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            //form yüklenir yüklenmez listview'ın gelmesinin önüne geçtik.//
 
         }
 
@@ -98,12 +93,6 @@ namespace YazilimSinama
             //tanımladığımız fonksiyonun çağrısını yaptık.//
             
         }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void menuStripOgrenci_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 

@@ -24,10 +24,11 @@ namespace YazilimSinama
         {
             dbislemleri.baglanti.Open();
             SqlCommand konueklekomutu = new SqlCommand("INSERT INTO tbl_Konu (konu) VALUES ('" + txtKonu.Text.ToString() + "')", dbislemleri.baglanti);
-            //ilgili butona girilen konuyu içeri aktarmak için sql komutu yazdık.//
+            //ilgili butona girilen konuyu içeri aktarmak için sql komutu yazdık.
             konueklekomutu.ExecuteNonQuery();
-            //sql komutunu okuttuk.//
+            //sql komutunu okuttuk.
             dbislemleri.baglanti.Close();
+            //bağlantı kapatıldı.
         }
 
         public void KonuEkleTest(string konu)
@@ -35,29 +36,38 @@ namespace YazilimSinama
             txtKonu.Text = konu.ToString();
             dbislemleri.baglanti.Open();
             SqlCommand konueklekomutu = new SqlCommand("INSERT INTO tbl_Konu (konu) VALUES ('" + txtKonu.Text + "')", dbislemleri.baglanti);
+            //ilgili butona girilen konuyu içeri aktarmak için sql komutu yazdık.
             konueklekomutu.ExecuteNonQuery();
+            //sql komutunu okuttuk.
             dbislemleri.baglanti.Close();
+            //bağlantı kapatıldı.
         }
 
         public void soruEkle()
         {
             dbislemleri.baglanti.Open();
             SqlCommand sorueklekomutu = new SqlCommand("INSERT INTO tbl_Soru(soru,dogruCevap) VALUES ('" + txtSoru.Text.ToString() + "','" + txtDogruCevap.Text.ToString() + "')", dbislemleri.baglanti);
+            //ilgili butona girilen konuyu içeri aktarmak için sql komutu yazdık.
             sorueklekomutu.ExecuteNonQuery();
+            //sql komutunu okuttuk.
             dbislemleri.baglanti.Close();
+            //bağlantı kapatıldı.
         }
 
         public void SoruEkleTest(string soru, int dogruCevap)
         {
             txtDogruCevap.Text = dogruCevap.ToString();
             txtSoru.Text = soru.ToString();
+            //Üstteki satırlarda, gelen parametreleri değer okuyacağımız yerlere attık.
             dbislemleri.baglanti.Open();
             SqlCommand sorueklekomutu = new SqlCommand("INSERT INTO tbl_Soru(soru,dogruCevap) VALUES ('" + txtSoru.Text + "','" + txtDogruCevap.Text + "')", dbislemleri.baglanti);
             sorueklekomutu.ExecuteNonQuery();
+            //sql komutunu okuttuk.
             dbislemleri.baglanti.Close();
             girisDurum = "basarili";
         }
 
+        //Mesaj gösterme Fonksiyonu
         public void MesajGoster()
         {
             MessageBox.Show("Soru başarıyla eklendi !");
@@ -67,7 +77,6 @@ namespace YazilimSinama
            
 
         }
-    
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -76,24 +85,9 @@ namespace YazilimSinama
             this.Hide();
             //geri tusuna tıklandığında anasayfaya dönmesini sağladık.//
         }
-
-        public void txtKonu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSoruEkle_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void pictureBoxOgretmen_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void btnSoruEkle_Click_1(object sender, EventArgs e)
         { 
+            //Eğer tüm alanlar doldurulmazsa soru ekleme işlemini iptal ediyor.
             if(txtDogruCevap.Text == "" || txtSoru.Text == "" || txtKonu.Text == "")
             {
                 MessageBox.Show("Lütfen soruyla alakalı tüm bilgileri giriniz.");

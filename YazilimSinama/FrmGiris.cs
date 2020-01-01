@@ -20,6 +20,7 @@ namespace YazilimSinama
         OgrenciGiris ogrencigirisyapalim = new OgrenciGiris();
         OgretmenGiris ogretmengirisyapalim = new OgretmenGiris();
     
+        //Giriş butonuna tıklandığında seçili olan kullanıcıya göre giriş yapıyor.
             private void btnGiris_Click(object sender, EventArgs e)
             {
                 if (rdnBtnOgrenci.Checked == true)
@@ -37,12 +38,14 @@ namespace YazilimSinama
 
             }
 
+        //Girilen değerlere kısıtlama uyguluyoruz.
         private void txtBoxKullanici_TextChanged(object sender, EventArgs e)
         {
             txtKullanici.Text = txtKullanici.Text.ToLower();
             txtKullanici.SelectionStart = txtKullanici.Text.Length;
         }
 
+        //Programdan çıkmak için yazılan fonksiyon.
         private void FrmGiris_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

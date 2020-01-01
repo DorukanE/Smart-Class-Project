@@ -54,7 +54,7 @@ namespace YazilimSinama
             dbIslem.baglanti.Open();
             string query = String.Format("SELECT SUM(dogruSayisi), FORMAT (ogrenilmeTarihi, 'dd-MM-yy') FROM tbl_Soru GROUP BY FORMAT (ogrenilmeTarihi, 'dd-MM-yy') HAVING FORMAT (ogrenilmeTarihi, 'dd-MM-yy')='{0}'", tarih);
             SqlCommand command = new SqlCommand(query, dbIslem.baglanti);
-
+            //SQL komutlarının yazıldığı yer.
 
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
@@ -63,6 +63,7 @@ namespace YazilimSinama
                 seciliGrafikteGoster(dogruSayisi, tarih);
             }
             dbIslem.baglanti.Close();
+            //Database bağlantısı kapanıyor ve grafiğe veriler aktarılıyor. 
         }
 
         private void seciliGrafikteGoster(int dogru, string tarih)       
