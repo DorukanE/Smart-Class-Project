@@ -48,6 +48,7 @@
             // 
             // btnGiris
             // 
+            this.btnGiris.Highlight = true;
             this.btnGiris.Location = new System.Drawing.Point(138, 123);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(114, 43);
@@ -175,6 +176,7 @@
             this.Controls.Add(this.pictureBoxCikis);
             this.Controls.Add(this.pictureBoxOgretmen);
             this.Controls.Add(this.pictureBoxOgrenci);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGiris";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Text = "Akıllı Sınıf Uygulaması";

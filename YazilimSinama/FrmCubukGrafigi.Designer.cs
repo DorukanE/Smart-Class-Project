@@ -31,14 +31,17 @@ namespace YazilimSinama
         private void InitializeComponent()
         {
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            Series series1 = new DevExpress.XtraCharts.Series();
-            LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCubukGrafigi));
             this.chartZamanBasari = new DevExpress.XtraCharts.ChartControl();
             this.cmbTarih = new MetroFramework.Controls.MetroComboBox();
             this.btnGrafikGoster = new MetroFramework.Controls.MetroButton();
             this.pictureBoxGeri = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartZamanBasari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +120,9 @@ namespace YazilimSinama
             this.Name = "FrmCubukGrafigi";
             this.Text = "Zaman Bazlı Başarı Grafiği";
             this.Load += new System.EventHandler(this.FrmCubukGrafigi_Load);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZamanBasari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeri)).EndInit();
             this.ResumeLayout(false);

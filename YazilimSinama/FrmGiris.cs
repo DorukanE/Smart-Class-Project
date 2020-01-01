@@ -22,28 +22,17 @@ namespace YazilimSinama
     
             private void btnGiris_Click(object sender, EventArgs e)
             {
-                if (txtKullanici.Text == string.Empty || txtSifre.Text == string.Empty)
-                {
-                    MessageBox.Show("Lütfen Kullanici Adi Ve Sifreni Gir..");
-
-                }
                 if (rdnBtnOgrenci.Checked == true)
                 {
                 ogrencigirisyapalim.girisYap(txtKullanici.Text, txtSifre.Text);
                 txtKullanici.Text = "";
                 txtSifre.Text = "";
-                FrmOgrenci ogrenciyeGecis = new FrmOgrenci();
-                ogrenciyeGecis.Show();
-                this.Hide();
             }
                 if (rdnBtnOgretmen.Checked == true)
                 {
                     ogretmengirisyapalim.OgretmengirisYap(txtKullanici.Text, txtSifre.Text);
                     txtKullanici.Text = "";
                     txtSifre.Text = "";
-                    FrmOgretmen ogretmenegecis = new FrmOgretmen();
-                    ogretmenegecis.Show();
-                    this.Hide();
                 }
 
             }

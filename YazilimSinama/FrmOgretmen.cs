@@ -27,17 +27,13 @@ namespace YazilimSinama
             konueklekomutu.ExecuteNonQuery();
             //sql komutunu okuttuk.//
             dbislemleri.baglanti.Close();
-            //baglantıyı kapattık.//
         }
         private void soruEkle()
         {
             dbislemleri.baglanti.Open();
             SqlCommand sorueklekomutu = new SqlCommand("INSERT INTO tbl_Soru(soru,dogruCevap) VALUES ('" + txtSoru.Text.ToString() + "','" + txtDogruCevap.Text.ToString() + "')", dbislemleri.baglanti);
-            //ilgili butona girilen soruyu içeri aktarmak için sql komutu yazdık.//
             sorueklekomutu.ExecuteNonQuery();
-            //komutu okuttuk.//
             dbislemleri.baglanti.Close();
-            //baglantıyı kapattık.//
         }
         private void FrmOgretmen_Load(object sender, EventArgs e)
         {
@@ -74,7 +70,6 @@ namespace YazilimSinama
             konuEkle();
             soruEkle();
             MessageBox.Show("Soru Başarıyla Eklendi!");
-            //butona tıkladğımızda tanımladığımız fonskiyonları çağırıp,kleme işlemini gerçekleştirdik.//
         }
     }
 }

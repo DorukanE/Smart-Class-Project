@@ -123,7 +123,7 @@ namespace YazilimSinama
             if (sure <= 0)
             {
                 timersure.Stop();
-                MessageBox.Show("Bu soru için ayrılan süre doldu,cevabınız yanlış!");
+                MessageBox.Show(" Maalesef bu soru için ayrılan süre doldu !");
                 dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = (kacinciOgrenme -1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
                 sure = 61;
                 timersure.Start();

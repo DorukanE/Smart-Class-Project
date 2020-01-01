@@ -87,22 +87,29 @@
             this.txtDogruCevap.Location = new System.Drawing.Point(157, 172);
             this.txtDogruCevap.Name = "txtDogruCevap";
             this.txtDogruCevap.Size = new System.Drawing.Size(163, 23);
+            this.txtDogruCevap.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtDogruCevap.TabIndex = 12;
+            this.txtDogruCevap.UseStyleColors = true;
             // 
             // txtSoru
             // 
+            this.txtSoru.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txtSoru.Location = new System.Drawing.Point(153, 85);
             this.txtSoru.Multiline = true;
             this.txtSoru.Name = "txtSoru";
             this.txtSoru.Size = new System.Drawing.Size(163, 65);
+            this.txtSoru.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtSoru.TabIndex = 11;
+            this.txtSoru.UseStyleColors = true;
             // 
             // txtKonu
             // 
             this.txtKonu.Location = new System.Drawing.Point(153, 29);
             this.txtKonu.Name = "txtKonu";
             this.txtKonu.Size = new System.Drawing.Size(167, 23);
+            this.txtKonu.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtKonu.TabIndex = 10;
+            this.txtKonu.UseStyleColors = true;
             // 
             // lblDogruCevap
             // 

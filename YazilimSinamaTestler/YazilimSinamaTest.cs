@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YazilimSinama;
+using System.Windows.Forms;
 
 namespace YazilimSinamaTestler
 {
@@ -22,15 +23,29 @@ namespace YazilimSinamaTestler
         }
 
         [TestMethod]
-        void ogretmenSoruEklemeTest()
+         void ogretmenGirisTest(string kullaniciAd, string sifre, string cikisDegeri)
+        {
+            OgretmenGiris ogretmenGiris = new OgretmenGiris();
+            ogretmenGiris.OgretmengirisYap(kullaniciAd, sifre);
+            Assert.AreEqual(cikisDegeri, ogretmenGiris.OgretmenkullaniciAdi_tut);
+        }
+
+        [TestMethod]
+        public void ogretmenGiris()
+        {
+            ogretmenGirisTest("eminborandag", "1234", "eminborandag");
+        }
+
+        [TestMethod]
+        void OgretmenSoruEklemeTest() 
         {
 
         }
 
         [TestMethod]
-        public void ogretmenSoruEkle()
+        public void OgretmenSoruEkleme()
         {
-            ogretmenSoruEklemeTest();
+            
         }
     }
 }
