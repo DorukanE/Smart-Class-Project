@@ -2,7 +2,7 @@
 
 namespace YazilimSinama
 {
-    partial class FrmCubukGrafigi
+    partial class FrmCizgiGrafigi
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace YazilimSinama
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCubukGrafigi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCizgiGrafigi));
             this.chartZamanBasari = new DevExpress.XtraCharts.ChartControl();
             this.cmbTarih = new MetroFramework.Controls.MetroComboBox();
             this.btnGrafikGoster = new MetroFramework.Controls.MetroButton();

@@ -266,3 +266,4 @@ C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinamaTestler\obj\Deb
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinamaTestler\obj\Debug\YazilimSinamaTestler.csproj.CopyComplete
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinamaTestler\obj\Debug\YazilimSinamaTestler.dll
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinamaTestler\obj\Debug\YazilimSinamaTestler.pdb
+C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinamaTestler\bin\Debug\MetroFramework.Fonts.dll

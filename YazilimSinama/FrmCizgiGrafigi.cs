@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace YazilimSinama
 {
-    public partial class FrmCubukGrafigi : MetroFramework.Forms.MetroForm
+    public partial class FrmCizgiGrafigi : MetroFramework.Forms.MetroForm
     {
-        public FrmCubukGrafigi()
+        public FrmCizgiGrafigi()
         {
             InitializeComponent();
         }

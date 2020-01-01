@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace YazilimSinamaTestler
 {
     [TestClass]
-    public class YazilimSinamaTest
+    public class YazilimSinamaTest : MetroFramework.Forms.MetroForm
     {
         [TestMethod]
          void ogrenciGirisTest(string kullaniciAd, string sifre, string cikisDegeri)
@@ -37,15 +37,19 @@ namespace YazilimSinamaTestler
         }
 
         [TestMethod]
-        void OgretmenSoruEklemeTest() 
+        void OgretmenSoruEklemeTest(string konu, string soru, int dogruCevap, string cikisDegeri) 
         {
-
+            FrmOgretmen ogretmenSoruEkle = new FrmOgretmen();
+            ogretmenSoruEkle.KonuEkleTest(konu);
+            ogretmenSoruEkle.SoruEkleTest(soru, dogruCevap);
+            ogretmenSoruEkle.MesajGoster();
+            Assert.AreEqual(cikisDegeri, ogretmenSoruEkle.girisDurum);
         }
 
         [TestMethod]
         public void OgretmenSoruEkleme()
         {
-            
+            OgretmenSoruEklemeTest("adsadasd", "sASas", 5, "basarili");
         }
     }
 }

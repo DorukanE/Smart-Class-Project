@@ -71,17 +71,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
-    <Compile Include="FrmBarGrafigi.cs">
+    <Compile Include="FrmBasariGrafigi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBarGrafigi.Designer.cs">
-      <DependentUpon>FrmBarGrafigi.cs</DependentUpon>
+    <Compile Include="FrmBasariGrafigi.Designer.cs">
+      <DependentUpon>FrmBasariGrafigi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCubukGrafigi.cs">
+    <Compile Include="FrmCizgiGrafigi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCubukGrafigi.Designer.cs">
-      <DependentUpon>FrmCubukGrafigi.cs</DependentUpon>
+    <Compile Include="FrmCizgiGrafigi.Designer.cs">
+      <DependentUpon>FrmCizgiGrafigi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGiris.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <Compile Include="OgretmenGiris.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBarGrafigi.resx">
-      <DependentUpon>FrmBarGrafigi.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBasariGrafigi.resx">
+      <DependentUpon>FrmBasariGrafigi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCubukGrafigi.resx">
-      <DependentUpon>FrmCubukGrafigi.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCizgiGrafigi.resx">
+      <DependentUpon>FrmCizgiGrafigi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>

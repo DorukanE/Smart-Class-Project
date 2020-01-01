@@ -39,7 +39,6 @@ C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\bin\Debug\Yazi
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\bin\Debug\MetroFramework.dll
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.csprojAssemblyReference.cache
-C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.FrmCubukGrafigi.resources
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.FrmGiris.resources
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.FrmOgrenci.resources
 C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.FrmOgretmen.resources
@@ -436,3 +435,4 @@ C:\Users\asus\OneDrive\Belgeler\Smart-Class-Project\YazilimSinama\obj\Debug\Yazi
 C:\Users\asus\OneDrive\Belgeler\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.csproj.CopyComplete
 C:\Users\asus\OneDrive\Belgeler\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.exe
 C:\Users\asus\OneDrive\Belgeler\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.pdb
+C:\Users\doruk\Documents\GitHub\Smart-Class-Project\YazilimSinama\obj\Debug\YazilimSinama.FrmCizgiGrafigi.resources

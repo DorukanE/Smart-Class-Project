@@ -70,7 +70,7 @@ namespace YazilimSinama
 
         private void çUBUKGRAFİĞİToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCubukGrafigi cubukGrafigineGecis = new FrmCubukGrafigi();
+            FrmCizgiGrafigi cubukGrafigineGecis = new FrmCizgiGrafigi();
             cubukGrafigineGecis.Show();
             this.Hide();
             // menustrip'e tıklandığında çubuk grafiğinin olduğu forma gitmesini sağladık.//
