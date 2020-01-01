@@ -12,7 +12,7 @@ namespace YazilimSinama
         {
             InitializeComponent();
         }
-        int sure = 61;
+        int sure = 121;
         Database dbislemleri = new Database();
         SoruObjesi donecekSoru = new SoruObjesi();
 
@@ -125,7 +125,7 @@ namespace YazilimSinama
                 timersure.Stop();
                 MessageBox.Show(" Maalesef bu soru için ayrılan süre doldu !");
                 dbislemleri.sorguCalistir("UPDATE tbl_Soru set kacinciOgrenme = (kacinciOgrenme -1), ogrenilmetarihi = getdate() where soruID = " + donecekSoru.soruID);
-                sure = 61;
+                sure = 121;
                 timersure.Start();
                 YeniSoru();
                 
@@ -202,7 +202,7 @@ namespace YazilimSinama
         private void pictureBox1_Click(object sender, EventArgs e)
 
         {
-            sure = 61;
+            sure = 121;
             timersure.Start();
             YeniSoru();
         }

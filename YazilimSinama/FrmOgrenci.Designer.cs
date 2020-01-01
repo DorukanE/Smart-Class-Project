@@ -108,15 +108,15 @@
             // barGrafikToolStripMenuItem
             // 
             this.barGrafikToolStripMenuItem.Name = "barGrafikToolStripMenuItem";
-            this.barGrafikToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.barGrafikToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.barGrafikToolStripMenuItem.Text = "BAR GRAFİĞİ";
             this.barGrafikToolStripMenuItem.Click += new System.EventHandler(this.bARGRAFİĞİToolStripMenuItem_Click);
             // 
             // cubukGrafikToolStripMenuItem
             // 
             this.cubukGrafikToolStripMenuItem.Name = "cubukGrafikToolStripMenuItem";
-            this.cubukGrafikToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.cubukGrafikToolStripMenuItem.Text = "ÇUBUK GRAFİĞİ";
+            this.cubukGrafikToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.cubukGrafikToolStripMenuItem.Text = "ÇİZGİ GRAFİĞİ";
             this.cubukGrafikToolStripMenuItem.Click += new System.EventHandler(this.çUBUKGRAFİĞİToolStripMenuItem_Click);
             // 
             // cikisToolStripMenuItem
