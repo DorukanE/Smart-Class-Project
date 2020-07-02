@@ -1,8 +1,8 @@
 # Software Test And Validation Project
 ## **Smart Class Project**
-### *Projenin amacı; öğrenci ve öğretmenlerin eğitim-öğretim hayatlarını kolaylaştırarak, az vakit harcayarak çok verimli işler gerçekleştirmelerini sağlamaktır. Bu mottoyla tasarlanmış projemizde; öğretmenlerin sistem üzerinden kolaylıkla soru girebilmesi, öğrencilerin hazırlanan bu sınavlara katılarak konu ve soru bazlı özelleşmiş istatistiklerini görebilmesi gibi pek çok özellik bulunmaktadır.*
-#### Projemizde C# programlama dili ve Microsoft SQL veritabanı kullanılmıştır. Görsellik olarak ise DevExpress Grafikleri ve Metro Framework kullanılmıştır.
-##### Projemizin çalışır haldeki ekran görüntüleri:
+### The goal of the project is to make students and teachers perform very productive works by facilitating their education and training lives, spending little time.<br> In our project designed with this motto there are many features such as teachers can easily enter questions through the system, students can participate in these exams and view their statistics based on topics and questions.
+#### This project made with C# programming language and Microsoft SQL Database. DevExpress Graphics and Metro Framework are used as visuals.
+##### Screenshots of the project:
 ![Giriş Ekranı](https://github.com/DorukanE/Smart-Class-Project/blob/master/images/Giri%C5%9F%20Ekran%C4%B1.png)
 ![Öğrenci Ekranı](https://github.com/DorukanE/Smart-Class-Project/blob/master/images/%C3%96%C4%9Frenci%20Ekran%C4%B1.png)
 ![Sınav Ekranı](https://github.com/DorukanE/Smart-Class-Project/blob/master/images/S%C4%B1nav%20Ekran%C4%B1.png)
